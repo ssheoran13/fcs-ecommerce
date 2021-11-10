@@ -16,6 +16,8 @@ from django.core.mail import send_mail
 from django.contrib.auth import authenticate,login
 from .forms import CheckoutForm, LoginForm, NewItemForm, SignUpForm, DocumentForm
 from .models import Buyer, Item, OrderItem, Order, BillingAddress, Payment, Coupon, Item, Seller, Document, SellerItem, SiteAdmin
+from ratelimit.decorators import ratelimit
+from django.utils.decorators import method_decorator
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -28,101 +30,126 @@ def products(request):
 
 
 def model_form_upload(request):
-    user = request.user
-    user_object = User.objects.filter(username=user.username).first()
-    if user_object == None :
-        messages.info(request, "Please Log In :D")
-        return redirect('core:login_seller')
-    
-    user = request.user
-    seller=Seller.objects.filter(user=user).first()
-    if seller == None:
-        messages.info(request, "You are not a seller. Please sign up as a Seller.")
-        return redirect('/')
-    
-    if request.method == 'POST':
-        form = DocumentForm(request.POST, request.FILES)
+    try:
+        user = request.user
+        user_object = User.objects.filter(username=user.username).first()
+        if user_object == None :
+            messages.info(request, "Please Log In :D")
+            return redirect('core:login_seller')
         
-        if form.is_valid():
-            filename=str(form.cleaned_data['document'])
-            if filename[-3:]=='pdf':
-                description = form.cleaned_data.get('description')
-                document = form.cleaned_data.get('document')
+        user = request.user
+        seller=Seller.objects.filter(user=user).first()
+        if seller == None:
+            messages.info(request, "You are not a seller. Please sign up as a Seller.")
+            return redirect('/')
+        
+        if request.method == 'POST':
+            form = DocumentForm(request.POST, request.FILES)
+            
+            if form.is_valid():
+                filename=str(form.cleaned_data['document'])
+                if filename[-3:]=='pdf':
+                    description = form.cleaned_data.get('description')
+                    document = form.cleaned_data.get('document')
 
-                if seller.is_verified == True:
-                    messages.info(request, "You are already verified.")
-                    return redirect('core:add-new-item')
-                    
-                uploaded_document = Document(description=description, document=document, user=user)
-                uploaded_document.save()
-                messages.success(request, 'Document Uploaded Successfully')
-                
-                return render(request, 'sellerhome.html')
-            else:
-                messages.info(request, "Please upload a valid PDF file.")
-                return redirect('core:sellerhome')
+                    if seller.is_verified == True:
+                        messages.info(request, "You are already verified.")
+                        return redirect('core:add-new-item')
                         
-    else:
-        form = DocumentForm()
-    return render(request, 'core/model_form_upload.html', {
-        'form': form
-    })
+                    uploaded_document = Document(description=description, document=document, user=user)
+                    uploaded_document.save()
+                    messages.success(request, 'Document Uploaded Successfully')
+                    
+                    return render(request, 'sellerhome.html')
+                else:
+                    messages.info(request, "Please upload a valid PDF file.")
+                    return redirect('core:sellerhome')
+                            
+        else:
+            form = DocumentForm()
+        return render(request, 'core/model_form_upload.html', {
+            'form': form
+        })
+    except Exception as e:
+        print(e)
+        messages.info(request, "Some Error Occurred")
+        return redirect('core:sellerhome')
 
 def decline_request(request,id):
-    doc= Document.objects.get(id=id)
-    user=doc.user
-    doc.delete()
-    messages.success(request, "Seller "+user.username+"'s request has been declined.")
-                
-    return redirect('/')
+    try:
+        doc= Document.objects.get(id=id)
+        user=doc.user
+        doc.delete()
+        messages.success(request, "Seller "+user.username+"'s request has been declined.")
+                    
+        return redirect('core:adminhome')
+    except Exception as e:
+        print(e)
+        messages.info(request, "Some Error Occurred")
+        return redirect('core:adminhome')
 
 def accept_request(request,id):
-    doc= Document.objects.get(id=id)
-    user=doc.user
-    doc.delete()
-    seller=Seller.objects.get(user=user)
-    seller.is_verified=True
-    seller.save()
-    print(seller.is_verified)
-    messages.success(request, "Seller "+user.username+"'s request has been accept.")
-                
-    return redirect('/')
+    try:
+        doc= Document.objects.get(id=id)
+        user=doc.user
+        doc.delete()
+        seller=Seller.objects.get(user=user)
+        seller.is_verified=True
+        seller.save()
+        print(seller.is_verified)
+        messages.success(request, "Seller "+user.username+"'s request has been accepted.")
+                    
+        return redirect('core:adminhome')
+    except Exception as e:
+        print(e)
+        messages.info(request, "Some Error Occurred")
+        return redirect('core:adminhome')
 
 def ViewSellerProfile(request):
-    user = request.user
-    user_object = User.objects.filter(username=user.username).first()
-    if user_object == None :
-        messages.info(request, "Please Log In :D")
-        return redirect('core:login_seller')
+    try:
+        user = request.user
+        user_object = User.objects.filter(username=user.username).first()
+        if user_object == None :
+            messages.info(request, "Please Log In :D")
+            return redirect('core:login_seller')
 
-    user = request.user
-    seller = Seller.objects.filter(user=user).first()
-    if seller == None:
-        messages.info(request, "You are not a seller. Please sign up as a Seller.")
-        return redirect('/')
+        user = request.user
+        seller = Seller.objects.filter(user=user).first()
+        if seller == None:
+            messages.info(request, "You are not a seller. Please sign up as a Seller.")
+            return redirect('/')
 
-    seller=Seller.objects.filter(user=user).first()
-    selleritems=SellerItem.objects.filter(user=seller)
-    return render(request, 'view_seller_profile.html', {'seller': seller, 'selleritems': selleritems})    
+        seller=Seller.objects.filter(user=user).first()
+        selleritems=SellerItem.objects.filter(user=seller)
+        return render(request, 'view_seller_profile.html', {'seller': seller, 'selleritems': selleritems})
+    except Exception as e:
+        print(e)
+        messages.info(request, "Some Error Occurred")
+        return redirect('core:sellerhome')    
     
 
 def ViewDocument(request):
-    user = request.user
-    user_object = User.objects.filter(username=user.username).first()
-    if user_object == None :
-        messages.info(request, "You are not Admin. Please login as Admin.")
-        return redirect('core:home')
+    try:
+        user = request.user
+        user_object = User.objects.filter(username=user.username).first()
+        if user_object == None :
+            messages.info(request, "You are not Admin. Please login as Admin.")
+            return redirect('core:home')
 
-    user = request.user
-    seller = Seller.objects.filter(user=user).first()
-    if seller == None:
-        messages.info(request, "You are not Admin. Please login as Admin.")
-        return redirect('/')
+        user = request.user
+        admin = SiteAdmin.objects.filter(user=user).first()
+        if admin == None:
+            messages.info(request, "You are not Admin. Please login as Admin.")
+            return redirect('/')
 
-    documents = Document.objects.all()
-    for i in documents:
-        print(i.document)    
-    return render(request, 'view_document.html', {'documents': documents})
+        documents = Document.objects.all()
+        for i in documents:
+            print(i.document)    
+        return render(request, 'view_document.html', {'documents': documents})
+    except Exception as e:
+        print(e)
+        messages.info(request, "Some Error Occurred")
+        return redirect('core:adminhome')
 
 
 class CheckoutView(View):
@@ -206,26 +233,32 @@ class CheckoutView(View):
 
 class PaymentView(View):
     def get(self, *args, **kwargs):
-        user = self.request.user
-        buyer = Buyer.objects.filter(user=user).first()
-        if buyer == None:
-            print("this 3")
-            messages.info(self.request, "You are not a Buyer. Please login as Buyer.")
-            return redirect('/')
-        if user == None:
-            return redirect('core:home')
+        try:
+            user = self.request.user
+            buyer = Buyer.objects.filter(user=user).first()
+            if buyer == None:
+                print("this 3")
+                messages.info(self.request, "You are not a Buyer. Please login as Buyer.")
+                return redirect('/')
+            if user == None:
+                return redirect('core:home')
 
-        user_object = User.objects.filter(username=user.username).first()
-        if user_object == None :
-            messages.info(self.request, "Please Log In :D")
+            user_object = User.objects.filter(username=user.username).first()
+            if user_object == None :
+                messages.info(self.request, "Please Log In :D")
+                return redirect('core:home')
+            order = Order.objects.get(user=self.request.user, ordered=False)
+            context = {
+                'order': order
+            }
+            return render(self.request, "payment.html", context)
+        except Exception as e:
+            print(e)
+            messages.info(self.request, "Some Error Occurred")
             return redirect('core:home')
-        order = Order.objects.get(user=self.request.user, ordered=False)
-        context = {
-            'order': order
-        }
-        return render(self.request, "payment.html", context)
 
     def post(self, *args, **kwargs):
+        
         user = self.request.user
         buyer = Buyer.objects.filter(user=user).first()
         if buyer == None:
@@ -317,62 +350,78 @@ class PaymentView(View):
 
 
 class HomeView(ListView):
+
     model = Item
     paginate_by = 12
     template_name = "home.html"
     search_query = ""
-
+    @method_decorator(ratelimit(key='ip', rate='1/m', method='POST'))
     def post(self, *args, **kwargs):
-        print(self.model)
-        print(self.request.POST)
-        search_query = self.request.POST.get("search")
-        print("response:",search_query)
-        obj = Item.objects.all().filter(title=search_query)
-        for i in obj:
-            print("test", i.title)
-        self.search_query = search_query
-        print(self.model)
-        return render(self.request, "home.html", {'object_list': obj})
+        try:
+            print(self.model)
+            print(self.request.POST)
+            search_query = self.request.POST.get("search")
+            print("response:",search_query)
+            obj = Item.objects.all().filter(title=search_query)
+            for i in obj:
+                print("test", i.title)
+            self.search_query = search_query
+            print(self.model)
+            return render(self.request, "home.html", {'object_list': obj})
+        except Exception as e:
+            print(e)
+            messages.error(self.request, "Some Error Occurred")
+            return redirect('core:home')
 
+    @method_decorator(ratelimit(key='ip', rate='5/m'))
     def get(self, *args, **kwargs):
-        user = self.request.user
-        
-        user_object = User.objects.filter(username=user.username).first()
-        if user_object == None:
-            if len(self.request.GET):
-                category = self.request.GET.get('category')
-                obj = Item.objects.filter(category=category)
-                print(len(obj))
-                return render(self.request, 'home.html', {'object_list':obj})
+        try:
+            user = self.request.user
+            was_limited = getattr(self.request, 'limited', False)
+            if was_limited:
+                messages.error(self.request, 'Too Many Requests')
+                return redirect('core:ratelimit')
+            print(was_limited)
+            user_object = User.objects.filter(username=user.username).first()
+            if user_object == None:
+                if len(self.request.GET):
+                    category = self.request.GET.get('category')
+                    obj = Item.objects.filter(category=category)
+                    print(len(obj))
+                    return render(self.request, 'home.html', {'object_list':obj})
 
-            return render(self.request, 'home.html', {'object_list':Item.objects.all()})
-        
-        seller = Seller.objects.filter(user=user).first()
-        site_admin = SiteAdmin.objects.filter(user=user).first()
-        buyer = Buyer.objects.filter(user=user).first()
+                return render(self.request, 'home.html', {'object_list':Item.objects.all()})
+            
+            seller = Seller.objects.filter(user=user).first()
+            site_admin = SiteAdmin.objects.filter(user=user).first()
+            buyer = Buyer.objects.filter(user=user).first()
 
-        if seller != None:
-            return redirect('core:sellerhome')
-        
-        elif site_admin != None:
-            return redirect('core:adminhome')
+            if seller != None:
+                return redirect('core:sellerhome')
+            
+            elif site_admin != None:
+                return redirect('core:adminhome')
 
-        elif buyer != None:
-            if len(self.request.GET):
-                category = self.request.GET.get('category')
-                obj = Item.objects.filter(category=category)
-                print(len(obj))
-                return render(self.request, 'home.html', {'object_list':obj})
+            elif buyer != None:
+                if len(self.request.GET):
+                    category = self.request.GET.get('category')
+                    obj = Item.objects.filter(category=category)
+                    print(len(obj))
+                    return render(self.request, 'home.html', {'object_list':obj})
 
-            return render(self.request, 'home.html', {'object_list':Item.objects.all()})
-        
-        else:
-            if len(self.request.GET):
-                category = self.request.GET.get('category')
-                obj = Item.objects.filter(category=category)
-                print(len(obj))
-                return render(self.request, 'home.html', {'object_list':obj})
-            return render(self.request, 'home.html', {'object_list':Item.objects.all()})
+                return render(self.request, 'home.html', {'object_list':Item.objects.all()})
+            
+            else:
+                if len(self.request.GET):
+                    category = self.request.GET.get('category')
+                    obj = Item.objects.filter(category=category)
+                    print(len(obj))
+                    return render(self.request, 'home.html', {'object_list':obj})
+                return render(self.request, 'home.html', {'object_list':Item.objects.all()})
+        except Exception as e:
+            print(e)
+            messages.error(self.request, "Some Error Occurred")
+            return redirect('core:home')
 
 def get_category_products(request, category):
     obj = Item.objects.filter(category=category)
@@ -381,27 +430,32 @@ def get_category_products(request, category):
 
 class OrderSummaryView(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
-        user = self.request.user
-        user_object = User.objects.filter(username=user.username).first()
-        if user_object == None :
-            messages.info(self.request, "Please Log In :D")
-            return redirect('core:home')
-
-        buyer = Buyer.objects.filter(user=user).first()
-        if buyer == None:
-            print("this 5")
-            messages.info(self.request, "You are not a buyer. Please login as Buyer.")
-            return redirect('/')
         try:
-            order = Order.objects.get(user=self.request.user, ordered=False)
-            context = {
-                'object': order
-            }
-            return render(self.request, 'order_summary.html', context)
-        
-        except ObjectDoesNotExist:
-            messages.error(self.request, "You do not have an active order")
-            return redirect("/")
+            user = self.request.user
+            user_object = User.objects.filter(username=user.username).first()
+            if user_object == None :
+                messages.info(self.request, "Please Log In :D")
+                return redirect('core:home')
+
+            buyer = Buyer.objects.filter(user=user).first()
+            if buyer == None:
+                print("this 5")
+                messages.info(self.request, "You are not a buyer. Please login as Buyer.")
+                return redirect('/')
+            try:
+                order = Order.objects.get(user=self.request.user, ordered=False)
+                context = {
+                    'object': order
+                }
+                return render(self.request, 'order_summary.html', context)
+            
+            except ObjectDoesNotExist:
+                messages.error(self.request, "You do not have an active order")
+                return redirect("/")
+        except Exception as e:
+            print(e)
+            messages.error(self.request, "Some Error Occurred")
+            return redirect('core:home')
 
 
 class ItemDetailView(DetailView):
@@ -412,193 +466,228 @@ class ItemDetailView(DetailView):
 # @login_required
 class AddNewItemView(LoginRequiredMixin, View):
     def get(self, *args, **kwargs):
-        user = self.request.user
-        user_object = User.objects.filter(username=user.username).first()
-        if user_object == None :
-            messages.info(self.request, "Please Log In :D")
-            return redirect('core:login_seller')
+        try:
+            user = self.request.user
+            user_object = User.objects.filter(username=user.username).first()
+            if user_object == None :
+                messages.info(self.request, "Please Log In :D")
+                return redirect('core:login_seller')
 
-        user = self.request.user
-        seller=Seller.objects.filter(user=user).first()
-        if seller == None:
-            messages.info(self.request, "You are not a seller. Please sign up as a Seller.")
-            return redirect('/')
+            user = self.request.user
+            seller=Seller.objects.filter(user=user).first()
+            if seller == None:
+                messages.info(self.request, "You are not a seller. Please sign up as a Seller.")
+                return redirect('/')
 
-        form = NewItemForm()
-        context = {
-            'form': form
-        }
-        return render(self.request, 'add-new-item.html', context)
+            form = NewItemForm()
+            context = {
+                'form': form
+            }
+            return render(self.request, 'add-new-item.html', context)
+        except Exception as e:
+            print(e)
+            messages.error(self.request, "Some Error Occurred")
+            return redirect('core:sellerhome')
 
     def post(self, *args, **kwargs):
-        user = self.request.user
-        user_object = User.objects.filter(username=user.username).first()
-        if user_object == None :
-            messages.info(self.request, "Please Log In :D")
-            return redirect('core:login_seller')
+        try:
+            user = self.request.user
+            user_object = User.objects.filter(username=user.username).first()
+            if user_object == None :
+                messages.info(self.request, "Please Log In :D")
+                return redirect('core:login_seller')
 
-        user = self.request.user
-        seller=Seller.objects.filter(user=user).first()
-        if seller == None:
-            messages.info(self.request, "You are not a seller. Please sign up as a Seller.")
-            return redirect('/')
-
-        form = NewItemForm(self.request.POST or None,self.request.FILES)
-        if form.is_valid():
-            user=self.request.user
-            if user==None:
-                messages.error(self.request, "Please login first.")
-                return redirect("/")
+            user = self.request.user
             seller=Seller.objects.filter(user=user).first()
-            if seller==None:
-                messages.error(self.request, "You are not a seller.")
-                return redirect("/")
-            if seller.is_verified==False:
-                messages.error(self.request, "You are not verified as a seller yet.")
+            if seller == None:
+                messages.info(self.request, "You are not a seller. Please sign up as a Seller.")
+                return redirect('/')
+
+            form = NewItemForm(self.request.POST or None,self.request.FILES)
+            if form.is_valid():
+                user=self.request.user
+                if user==None:
+                    messages.error(self.request, "Please login first.")
+                    return redirect("/")
+                seller=Seller.objects.filter(user=user).first()
+                if seller==None:
+                    messages.error(self.request, "You are not a seller.")
+                    return redirect("/")
+                if seller.is_verified==False:
+                    messages.error(self.request, "You are not verified as a seller yet.")
+                    return render(self.request,'sellerhome.html')
+                
+                # print(self.request.POST['image'])
+                # print(self.request.FILES)
+                print(form.cleaned_data)
+                title = form.cleaned_data.get('title')
+                price = form.cleaned_data.get('price')
+                label = 'P'
+                description = form.cleaned_data.get('description')
+                category = form.cleaned_data.get('category')
+                slug = title.replace(' ', '-') + str(random.randint(1,100))
+                image = form.cleaned_data.get('image')
+                item = Item(title=title, price=price,
+                            category=category, label=label, slug=slug, description=description, image=image)
+                # item = form.save(commit=False)
+                # print(item_data)
+                
+                
+                item.user = self.request.user
+                item.save()
+                seller_item=SellerItem(user=seller,item=item)
+                seller_item.save()
+                messages.success(self.request, "Item added successfully")
                 return render(self.request,'sellerhome.html')
-            
-            # print(self.request.POST['image'])
-            # print(self.request.FILES)
-            print(form.cleaned_data)
-            title = form.cleaned_data.get('title')
-            price = form.cleaned_data.get('price')
-            label = 'P'
-            description = form.cleaned_data.get('description')
-            category = form.cleaned_data.get('category')
-            slug = title.replace(' ', '-') + str(random.randint(1,100))
-            image = form.cleaned_data.get('image')
-            item = Item(title=title, price=price,
-                        category=category, label=label, slug=slug, description=description, image=image)
-            # item = form.save(commit=False)
-            # print(item_data)
-            
-            
-            item.user = self.request.user
-            item.save()
-            seller_item=SellerItem(user=seller,item=item)
-            seller_item.save()
-            messages.success(self.request, "Item added successfully")
-            return render(self.request,'sellerhome.html')
-        else:
-            messages.error(self.request, "Item was not added")
-            return redirect("core:add-new-item")
+            else:
+                messages.error(self.request, "Item was not added")
+                return redirect("core:add-new-item")
+        except Exception as e:
+            print(e)
+            messages.error(self.request, "Some Error Occurred")
+            return redirect('core:sellerhome')
 
-
+@ratelimit(key='ip', rate='60/m')
 @login_required
 def add_to_cart(request, slug):
-    item = get_object_or_404(Item, slug=slug)
-    order_item, created = OrderItem.objects.get_or_create(
-        item=item,
-        user=request.user,
-        ordered=False
-    )
-    order_qs = Order.objects.filter(user=request.user, ordered=False)
-    if order_qs.exists():
-        order = order_qs[0]
-        # check if the order item is in the order
-        if order.items.filter(item__slug=item.slug).exists():
-            order_item.quantity += 1
-            order_item.save()
-            messages.info(request, "This item quantity was updated.")
-            return redirect("core:order-summary")
+    try:
+        was_limited = getattr(request, 'limited', False)
+        if was_limited:
+            messages.error(request, 'Too Many Requests')
+            return redirect('core:ratelimit')
+        print("cart",was_limited)
+        item = get_object_or_404(Item, slug=slug)
+        order_item, created = OrderItem.objects.get_or_create(
+            item=item,
+            user=request.user,
+            ordered=False
+        )
+        order_qs = Order.objects.filter(user=request.user, ordered=False)
+        if order_qs.exists():
+            order = order_qs[0]
+            # check if the order item is in the order
+            if order.items.filter(item__slug=item.slug).exists():
+                order_item.quantity += 1
+                order_item.save()
+                messages.info(request, "This item quantity was updated.")
+                return redirect("core:order-summary")
+            else:
+                order.items.add(order_item)
+                messages.info(request, "This item was added to your cart.")
+
+                return redirect("core:order-summary")
         else:
+            ordered_date = timezone.now()
+            order = Order.objects.create(
+                user=request.user, ordered_date=ordered_date)
             order.items.add(order_item)
             messages.info(request, "This item was added to your cart.")
 
             return redirect("core:order-summary")
-    else:
-        ordered_date = timezone.now()
-        order = Order.objects.create(
-            user=request.user, ordered_date=ordered_date)
-        order.items.add(order_item)
-        messages.info(request, "This item was added to your cart.")
-
-        return redirect("core:order-summary")
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
 
 
 def add_new_item(request):
-    user = request.user
-    user_object = User.objects.filter(username=user.username).first()
-    
-    if user_object == None :
-        messages.info(request, "Please Log In :D")
-        return redirect('core:login_seller')
-    
-    user = request.user
-    seller=Seller.objects.filter(user=user).first()
-    if seller == None:
-        messages.info(request, "You are not a seller. Please sign up as a Seller.")
-        return redirect('/')
-    
-    if request.method == "POST":
-        form = NewItemForm(request.POST, request.FILES)
-        if form.is_valid():
-            item = form.save(commit=False)
-            item.user = request.user
-            item.save()
-            messages.success(request, "Your item has been added successfully")
-            return redirect("core:add-new-item")
-    else:
-        form = NewItemForm()
-    return render(request, 'add_new_item.html', {'form': form})
+    try:
+        user = request.user
+        user_object = User.objects.filter(username=user.username).first()
+        
+        if user_object == None :
+            messages.info(request, "Please Log In :D")
+            return redirect('core:login_seller')
+        
+        user = request.user
+        seller=Seller.objects.filter(user=user).first()
+        if seller == None:
+            messages.info(request, "You are not a seller. Please sign up as a Seller.")
+            return redirect('/')
+        
+        if request.method == "POST":
+            form = NewItemForm(request.POST, request.FILES)
+            if form.is_valid():
+                item = form.save(commit=False)
+                item.user = request.user
+                item.save()
+                messages.success(request, "Your item has been added successfully")
+                return redirect("core:add-new-item")
+        else:
+            form = NewItemForm()
+        return render(request, 'add_new_item.html', {'form': form})
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:sellerhome')
 
 
 @login_required
 def remove_from_cart(request, slug):
-    item = get_object_or_404(Item, slug=slug)
-    order_qs = Order.objects.filter(
-        user=request.user,
-        ordered=False
-    )
-    if order_qs.exists():
-        order = order_qs[0]
-        # check if the order item is in the order
-        if order.items.filter(item__slug=item.slug).exists():
-            order_item = OrderItem.objects.filter(
-                item=item,
-                user=request.user,
-                ordered=False
-            )[0]
-            order.items.remove(order_item)
-            messages.info(request, "This item was removed to your cart.")
-            return redirect("core:order-summary")
+    try:
+        item = get_object_or_404(Item, slug=slug)
+        order_qs = Order.objects.filter(
+            user=request.user,
+            ordered=False
+        )
+        if order_qs.exists():
+            order = order_qs[0]
+            # check if the order item is in the order
+            if order.items.filter(item__slug=item.slug).exists():
+                order_item = OrderItem.objects.filter(
+                    item=item,
+                    user=request.user,
+                    ordered=False
+                )[0]
+                order.items.remove(order_item)
+                messages.info(request, "This item was removed to your cart.")
+                return redirect("core:order-summary")
+            else:
+                messages.info(request, "This item was not in your cart.")
+                return redirect("core:order-summary", slug=slug)
         else:
-            messages.info(request, "This item was not in your cart.")
+            messages.info(request, "You do not have an active order.")
             return redirect("core:order-summary", slug=slug)
-    else:
-        messages.info(request, "You do not have an active order.")
-        return redirect("core:order-summary", slug=slug)
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
 
 
 @login_required
 def remove_single_item_from_cart(request, slug):
-    item = get_object_or_404(Item, slug=slug)
-    order_qs = Order.objects.filter(
-        user=request.user,
-        ordered=False
-    )
-    if order_qs.exists():
-        order = order_qs[0]
-        # check if the order item is in the order
-        if order.items.filter(item__slug=item.slug).exists():
-            order_item = OrderItem.objects.filter(
-                item=item,
-                user=request.user,
-                ordered=False
-            )[0]
-            if order_item.quantity > 1:
-                order_item.quantity -= 1
-                order_item.save()
+    try:
+        item = get_object_or_404(Item, slug=slug)
+        order_qs = Order.objects.filter(
+            user=request.user,
+            ordered=False
+        )
+        if order_qs.exists():
+            order = order_qs[0]
+            # check if the order item is in the order
+            if order.items.filter(item__slug=item.slug).exists():
+                order_item = OrderItem.objects.filter(
+                    item=item,
+                    user=request.user,
+                    ordered=False
+                )[0]
+                if order_item.quantity > 1:
+                    order_item.quantity -= 1
+                    order_item.save()
+                else:
+                    order.items.remove(order_item)
+                messages.info(request, "This item quantity was updated.")
+                return redirect("core:order-summary")
             else:
-                order.items.remove(order_item)
-            messages.info(request, "This item quantity was updated.")
-            return redirect("core:order-summary")
+                messages.info(request, "This item was not in your cart.")
+                return redirect("core:product", slug=slug)
         else:
-            messages.info(request, "This item was not in your cart.")
+            messages.info(request, "You do not have an active order.")
             return redirect("core:product", slug=slug)
-    else:
-        messages.info(request, "You do not have an active order.")
-        return redirect("core:product", slug=slug)
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
 
 
 def get_coupon(request, code):
@@ -623,71 +712,96 @@ def add_coupon(request):
         return redirect('core:checkout')
 
 
+@ratelimit(key='ip', rate='2/s')
 def login_buyer(request):
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user_obj = User.objects.filter(username=username).first()
+    try:
+        was_limited = getattr(request, 'limited', False)
+        if was_limited:
+            messages.error(request, 'Too Many Requests')
+            return redirect('core:ratelimit')
+        if request.method == 'POST':
+            form = LoginForm(request.POST)
+            if form.is_valid():
+                username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password')
+                user_obj = User.objects.filter(username=username).first()
 
-            if user_obj is None:
-                messages.error(request, 'User Does Not Exist')
-                return redirect('core:login_buyer')
+                if user_obj is None:
+                    messages.error(request, 'User Does Not Exist')
+                    return redirect('core:login_buyer')
 
-            profile = Buyer.objects.filter(user=user_obj).first()
-            if profile is None:
-                messages.error(request, 'Buyer Does Not Exist')
-                return redirect('core:login_buyer')
+                profile = Buyer.objects.filter(user=user_obj).first()
+                if profile is None:
+                    messages.error(request, 'Buyer Does Not Exist')
+                    return redirect('core:login_buyer')
 
-            if profile.otp_done!=True:
-                messages.info(request, "Please verify your Email ID")
-                return redirect('core:login_buyer')
-            
-            user = authenticate(request, username=username, password=password)
+                if profile.otp_done!=True:
+                    messages.info(request, "Please verify your Email ID")
+                    return redirect('core:login_buyer')
+                
+                user = authenticate(request, username=username, password=password)
 
-            if user is not None:
-                login(request, user)
-                messages.success(request, 'Successfully logged in')
-                return redirect('core:home')
-            else:
-                messages.error(request, 'Invalid username or password')
-                return redirect('core:login_buyer')
-    return render(request, 'login_buyer.html')
+                if user is not None:
+                    login(request, user)
+                    messages.success(request, 'Successfully logged in')
+                    return redirect('core:home')
+                else:
+                    messages.error(request, 'Invalid username or password')
+                    return redirect('core:login_buyer')
+        return render(request, 'login_buyer.html')
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
 
+@ratelimit(key='ip', rate='2/s')
 def signup_buyer(request):
-    if request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            email = form.cleaned_data.get('email')
+    try:
 
-            if User.objects.filter(username=username).first():
-                messages.success(request, 'Username Taken')
+        was_limited = getattr(request, 'limited', False)
+        if was_limited:
+            messages.error(request, 'Too Many Requests')
+            return redirect('core:ratelimit')
+        if request.method == 'POST':
+            form = SignUpForm(request.POST)
+            if form.is_valid():
+                
+                username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password')
+                email = form.cleaned_data.get('email')
+
+                if User.objects.filter(username=username).first():
+                    messages.success(request, 'Username Taken')
+                    return redirect('core:signup_buyer')
+                
+                user = User.objects.create_user(username=username, email=email)
+                user.set_password(password)
+                user.save()
+                auth_token = str(uuid.uuid4())
+                buyer = Buyer.objects.create(user=user, auth_token=auth_token)
+                buyer.save()
+                messages.success(request, 'Account Created Successfully. Please Check Your Email To Verify Your Account.')
+                link = request.build_absolute_uri()
+                print(link)
+                send_email(email,build_link(link,auth_token,"buyer"))
                 return redirect('core:signup_buyer')
-            
-            user = User.objects.create_user(username=username, email=email)
-            user.set_password(password)
-            user.save()
-            auth_token = str(uuid.uuid4())
-            buyer = Buyer.objects.create(user=user, auth_token=auth_token)
-            buyer.save()
-            messages.success(request, 'Account Created Successfully. Please Check Your Email To Verify Your Account.')
-            link = request.build_absolute_uri()
-            print(link)
-            send_email(email,build_link(link,auth_token,"buyer"))
-            return redirect('core:signup_buyer')
-    return render(request, 'signup_buyer.html')
+        return render(request, 'signup_buyer.html')
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
 
 def verify_buyer(request,auth_token):
-    
-    buyer = Buyer.objects.get(auth_token=auth_token)
-    buyer.otp_done = True
-    buyer.save()
-    messages.success(request, 'Account Verified Successfully')
-    return redirect('core:login_buyer')
+    try:
+        buyer = Buyer.objects.get(auth_token=auth_token)
+        buyer.otp_done = True
+        buyer.save()
+        messages.success(request, 'Account Verified Successfully')
+        return redirect('core:login_buyer')
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
 
 
 def build_link(path,auth_token,type):
@@ -712,191 +826,268 @@ def send_email(email,link):
     send_mail(subject, message, from_email, to_list, fail_silently=True)
 
 def SellerHome(request):
-    user = request.user
-    user_object = User.objects.filter(username=user.username).first()
-    if user_object == None :
-        messages.info(request, "Please Log In :D")
-        return redirect('core:login_seller')
-    seller = Seller.objects.filter(user=user_object).first()
-    return render(request,'sellerhome.html', {'seller':seller})
+    try:
+        user = request.user
+        user_object = User.objects.filter(username=user.username).first()
+        if user_object == None :
+            messages.info(request, "Please Log In :D")
+            return redirect('core:login_seller')
+        seller = Seller.objects.filter(user=user_object).first()
+        return render(request,'sellerhome.html', {'seller':seller})
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
 
+@ratelimit(key='ip', rate='2/s')
 def login_seller(request):
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-     
-            user_obj = User.objects.filter(username=username).first()
-            
-            if user_obj is None:
-                messages.error(request, 'User Does Not Exist')
-                return redirect('core:login_buyer')
+    try:
+   
+        was_limited = getattr(request, 'limited', False)
+        if was_limited:
+            messages.error(request, 'Too Many Requests')
+            return redirect('core:ratelimit')
+        if request.method == 'POST':
+            form = LoginForm(request.POST)
+            if form.is_valid():
+                username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password')
+        
+                user_obj = User.objects.filter(username=username).first()
+                
+                if user_obj is None:
+                    messages.error(request, 'User Does Not Exist')
+                    return redirect('core:login_buyer')
 
-            profile = Seller.objects.filter(user=user_obj).first()
+                profile = Seller.objects.filter(user=user_obj).first()
 
-            if profile is None:
-                messages.error(request, 'You Are Not Registered As A Seller')
-                return redirect('core:login_seller')
-            if profile.otp_done!=True:
-                messages.info(request, "Please verify your Email ID")
-                return redirect('core:login_seller')
-            
-            user = authenticate(request, username=username, password=password)
-
-            if user is not None:
-                login(request, user)
-                messages.success(request, 'Successfully logged in')
-                return redirect('core:sellerhome')
-            else:
-                messages.error(request, 'Invalid username or password')
-                return redirect('core:login_seller')
-    return render(request, 'login_seller.html')
-
-def signup_seller(request):
-    if request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            email = form.cleaned_data.get('email')
-
-            if User.objects.filter(username=username).first():
-                messages.success(request, 'Username Taken')
-                return redirect('core:signup_buyer')
-            
-            user = User.objects.create_user(username=username, email=email)
-            user.set_password(password)
-            user.save()
-            auth_token = str(uuid.uuid4())
-            buyer = Seller.objects.create(user=user, auth_token=auth_token)
-            buyer.save()
-            messages.success(request, 'Account Created Successfully. Please Check Your Email To Verify Your Account.')
-            link = request.build_absolute_uri()
-            print(link)
-            send_email(email,build_link(link,auth_token,"seller"))
-            return redirect('core:signup_seller')
-    return render(request, 'signup_seller.html')
-
-def verify_seller(request,auth_token):
-    
-    seller = Seller.objects.get(auth_token=auth_token)
-    seller.otp_done = True
-    seller.save()
-    messages.success(request, 'Account Verified Successfully')
-    return redirect('core:login_seller')
-
-
-def siteadmin(request):
-
-    user = request.user
-    if user == None :
-        messages.error(request, 'User does not exist')
-        return redirect('core:login_admin')
-
-    user_object = User.objects.filter(username=user.username).first()
-    if user_object == None :
-        return redirect('core:login_admin')
-
-    site_admin = SiteAdmin.objects.filter(user=user).first()
-    if site_admin is None:
-        messages.error(request, 'You Are Not Registered As A Site Admin')
-        return redirect('core:login_admin')
-
-    if request.method == 'POST':
-        user_name = request.POST.get('user_name')
-        user = User.objects.get(username = user_name)
-        user.delete()
-        return redirect('core:siteadmin')
-
-    buyer_list = Buyer.objects.all()
-    seller_list = Seller.objects.all()
-    user_list = User.objects.all()
-
-    listy = [["Buyer", buyer_list], ["Seller", seller_list]]
-
-    return render(request, 'siteadmin.html', {'object_list': listy})
-
-
-def deleteproduct(request):
-
-    user = request.user
-    if user == None :
-        messages.error(request, 'User does not exist')
-        return redirect('core:login_admin')
-
-    user_object = User.objects.filter(username=user.username).first()
-    if user_object == None :
-        messages.info(request, "Please Log In :D")
-        return redirect('core:login_admin')
-
-    site_admin = SiteAdmin.objects.filter(user=user).first()
-    if site_admin is None:
-        messages.error(request, 'You Are Not Registered As A Site Admin')
-        return redirect('core:login_admin')
-
-    if request.method == 'POST':
-        title_ = request.POST.get('title_')
-        title = Item.objects.get(title = title_)
-        title.delete()
-        return redirect('core:deleteproduct')
-
-    product_list = Item.objects.all()
-    item_owner_list = []
-    for item in product_list:
-        seller_item = SellerItem.objects.filter(item=item).first()
-        user = seller_item.user
-        item_owner_list.append([item, user.user.username])
-
-
-    return render(request, 'deleteproduct.html', {'object_list': item_owner_list})
-
-def login_admin(request):
-
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-
-        if form.is_valid():
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
-            user_obj = User.objects.filter(username=username).first()
-
-            if user_obj is None:
-                messages.error(request, 'User Does Not Exist')
-                return redirect('core:login_admin')
-
-            profile = SiteAdmin.objects.filter(user=user_obj).first()
-
-            if profile is None:
-                messages.error(request, 'You Are Not Registered As A SiteAdmin')
-                return redirect('core:login_admin')
-            else:
+                if profile is None:
+                    messages.error(request, 'You Are Not Registered As A Seller')
+                    return redirect('core:login_seller')
+                if profile.otp_done!=True:
+                    messages.info(request, "Please verify your Email ID")
+                    return redirect('core:login_seller')
+                
                 user = authenticate(request, username=username, password=password)
 
                 if user is not None:
                     login(request, user)
                     messages.success(request, 'Successfully logged in')
-                    return redirect('core:adminhome')
+                    return redirect('core:sellerhome')
                 else:
                     messages.error(request, 'Invalid username or password')
+                    return redirect('core:login_seller')
+        return render(request, 'login_seller.html')
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
+
+
+@ratelimit(key='ip', rate='2/s')
+def signup_seller(request):
+    try:
+
+        was_limited = getattr(request, 'limited', False)
+        if was_limited:
+            messages.error(request, 'Too Many Requests')
+            return redirect('core:ratelimit')
+        if request.method == 'POST':
+            form = SignUpForm(request.POST)
+            if form.is_valid():
+                
+                username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password')
+                email = form.cleaned_data.get('email')
+
+                if User.objects.filter(username=username).first():
+                    messages.success(request, 'Username Taken')
+                    return redirect('core:signup_buyer')
+                
+                user = User.objects.create_user(username=username, email=email)
+                user.set_password(password)
+                user.save()
+                auth_token = str(uuid.uuid4())
+                buyer = Seller.objects.create(user=user, auth_token=auth_token)
+                buyer.save()
+                messages.success(request, 'Account Created Successfully. Please Check Your Email To Verify Your Account.')
+                link = request.build_absolute_uri()
+                print(link)
+                send_email(email,build_link(link,auth_token,"seller"))
+                return redirect('core:signup_seller')
+        return render(request, 'signup_seller.html')
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
+
+def verify_seller(request,auth_token):
+    try:
+        seller = Seller.objects.get(auth_token=auth_token)
+        seller.otp_done = True
+        seller.save()
+        messages.success(request, 'Account Verified Successfully')
+        return redirect('core:login_seller')
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
+
+
+def siteadmin(request):
+    try:
+        user = request.user
+        if user == None :
+            messages.error(request, 'User does not exist')
+            return redirect('core:login_admin')
+
+        user_object = User.objects.filter(username=user.username).first()
+        if user_object == None :
+            return redirect('core:login_admin')
+
+        site_admin = SiteAdmin.objects.filter(user=user).first()
+        if site_admin is None:
+            messages.error(request, 'You Are Not Registered As A Site Admin')
+            return redirect('core:login_admin')
+
+        if request.method == 'POST':
+            user_name = request.POST.get('user_name')
+            user = User.objects.get(username = user_name)
+            user.delete()
+            return redirect('core:siteadmin')
+
+        buyer_list = Buyer.objects.all()
+        seller_list = Seller.objects.all()
+        user_list = User.objects.all()
+
+        listy = [["Buyer", buyer_list], ["Seller", seller_list]]
+
+        return render(request, 'siteadmin.html', {'object_list': listy})
+    
+    except ObjectDoesNotExist:
+        messages.error(request, 'The user you entered does not exist.')
+        return redirect('core:adminhome')
+
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
+
+
+def deleteproduct(request):
+    try:
+        user = request.user
+        if user == None :
+            messages.error(request, 'User does not exist')
+            return redirect('core:login_admin')
+
+        user_object = User.objects.filter(username=user.username).first()
+        if user_object == None :
+            messages.info(request, "Please Log In :D")
+            return redirect('core:login_admin')
+
+        site_admin = SiteAdmin.objects.filter(user=user).first()
+        if site_admin is None:
+            messages.error(request, 'You Are Not Registered As A Site Admin')
+            return redirect('core:login_admin')
+
+        if request.method == 'POST':
+            title_ = request.POST.get('title_')
+            print(title_)
+            title = Item.objects.get(title = title_)
+
+            print(title)
+            title.delete()
+            return redirect('core:deleteproduct')
+    
+
+        product_list = Item.objects.all()
+        item_owner_list = []
+        for item in product_list:
+            seller_item = SellerItem.objects.filter(item=item).first()
+            user = seller_item.user
+            item_owner_list.append([item, user.user.username])
+
+
+        return render(request, 'deleteproduct.html', {'object_list': item_owner_list})
+    except ObjectDoesNotExist:
+        messages.error(request, "The product you entered does not exist.")
+        return redirect('core:adminhome')
+
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
+
+
+
+
+@ratelimit(key='ip', rate='2/s')
+def login_admin(request):
+    try:
+        was_limited = getattr(request, 'limited', False)
+        if was_limited:
+            messages.error(request, 'Too Many Requests')
+            return redirect('core:ratelimit')
+        if request.method == 'POST':
+            form = LoginForm(request.POST)
+
+            if form.is_valid():
+                username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password')
+                user_obj = User.objects.filter(username=username).first()
+
+                if user_obj is None:
+                    messages.error(request, 'User Does Not Exist')
                     return redirect('core:login_admin')
 
-    return render(request, 'login_admin.html')
+                profile = SiteAdmin.objects.filter(user=user_obj).first()
+
+                if profile is None:
+                    messages.error(request, 'You Are Not Registered As A SiteAdmin')
+                    return redirect('core:login_admin')
+                else:
+                    user = authenticate(request, username=username, password=password)
+
+                    if user is not None:
+                        login(request, user)
+                        messages.success(request, 'Successfully logged in')
+                        return redirect('core:adminhome')
+                    else:
+                        messages.error(request, 'Invalid username or password')
+                        return redirect('core:login_admin')
+
+        return render(request, 'login_admin.html')
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
+
+
 
 def adminhome(request):
-    user = request.user
-    siteadmin = SiteAdmin.objects.filter(user=user).first()
-    if siteadmin == None:
-        messages.info(request, "You are not Admin. Please login as Admin.")
-        return redirect('/')
-    # user = request.user
-    if user == None:
-        return redirect('core:login_admin')
+    try:
+        user = request.user
+        
+        user_object = User.objects.filter(username=user.username).first()
+        if user_object == None :
+            messages.info(request, "Please Log In :D")
+            return redirect('core:login_admin')
+        
+        siteadmin = SiteAdmin.objects.filter(user=user).first()
+        if siteadmin == None:
+            messages.info(request, "You are not Admin. Please login as Admin.")
+            return redirect('/')
+        # user = request.user
+        if user == None:
+            return redirect('core:login_admin')
 
-    user_object = User.objects.filter(username=user.username).first()
-    if user_object == None :
-        messages.info(request, "Please Log In :D")
-        return redirect('core:login_admin')
 
-    return render(request,'adminhome.html')
+        return render(request,'adminhome.html')
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
+
+def rate_limit(request):
+    return render(request, 'rate_limit.html')

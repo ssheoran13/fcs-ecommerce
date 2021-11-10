@@ -30,7 +30,8 @@ from .views import (
     deleteproduct,
     login_admin,
     adminhome,
-    get_category_products
+    get_category_products,
+    rate_limit
 )
 
 
@@ -64,5 +65,6 @@ urlpatterns = [
     path("deleteproduct/", deleteproduct, name="deleteproduct"),
     path("login_admin/", login_admin, name="login_admin"),
     path("adminhome/", adminhome, name="adminhome"),
-    path("home/<category>", get_category_products, name="get_category_products")
+    path("home/<category>", get_category_products, name="get_category_products"),
+    path("ratelimit/", rate_limit, name="ratelimit")
 ]

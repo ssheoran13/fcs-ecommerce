@@ -15,6 +15,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django_extensions',
+
     'django.contrib.sites',
     'allauth',
     'allauth.account',
@@ -82,6 +84,12 @@ if ENVIRONMENT == 'production':
     SECURE_REDIRECT_EXEMPT = []
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+    SECURE_SSL_REDIRECT = True
+    SECURE_HSTS_SECONDS = 3600
+    SESSION_COOKIE_SECURE = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
+    CSRF_COOKIE_SECURE = True
 
 
 # Auth

@@ -229,6 +229,11 @@ class CheckoutView(View):
         except ObjectDoesNotExist:
             messages.error(self.request, "You do not have an active order")
             return redirect("core:order-summary")
+        
+        except Exception as e:
+            print(e)
+            messages.error(self.request, "Some Error Occoured")
+            return redirect("core:home")
 
 
 class PaymentView(View):
@@ -548,9 +553,21 @@ class AddNewItemView(LoginRequiredMixin, View):
             return redirect('core:sellerhome')
 
 @ratelimit(key='ip', rate='60/m')
-@login_required
+
 def add_to_cart(request, slug):
     try:
+        user = request.user
+        user_object = User.objects.filter(username=user.username).first()
+        
+        if user_object == None :
+            messages.info(request, "Please Log In :D")
+            return redirect('core:login_buyer')
+        
+        user = request.user
+        buyer=Buyer.objects.filter(user=user).first()
+        if buyer == None:
+            messages.info(request, "You are not a Buyer. Please sign up as a Buyer.")
+            return redirect('/')
         was_limited = getattr(request, 'limited', False)
         if was_limited:
             messages.error(request, 'Too Many Requests')

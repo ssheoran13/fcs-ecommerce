@@ -1,5 +1,8 @@
 from django.urls import path
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
+from django.views.static import serve
+from django.conf.urls import url
 
 from .views import (
     ItemDetailView,
@@ -71,5 +74,15 @@ urlpatterns = [
     path("home/<category>", get_category_products, name="get_category_products"),
     path("ratelimit/", rate_limit, name="ratelimit"),
     path("forgot_password/", forgot_password, name="forgot_password"),
-    path("reset_password/", reset_password, name="reset_password")
+    path("reset_password/", reset_password, name="reset_password"),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATICFILES_DIRS}),
 ]
+
+
+# if settings.DEBUG:
+#     urlpatterns += patterns('',
+#         url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+#             'document_root': settings.MEDIA_ROOT,
+#         }),
+#    )

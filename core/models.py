@@ -55,7 +55,6 @@ class Item(models.Model):
     def category_url_stationery(self):
         return reverse("core:home") + '/O'
 
-
         
 class OrderItem(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -103,6 +102,7 @@ class Order(models.Model):
             total += order_item.get_final_price()
         return total
 
+
 class BillingAddress(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     street_address = models.CharField(max_length=100,null=True)
@@ -112,6 +112,7 @@ class BillingAddress(models.Model):
 
     def __str__(self):
         return self.user.username
+
 
 class Payment(models.Model):
     stripe_charge_id = models.CharField(max_length=50)
@@ -136,7 +137,6 @@ class Buyer(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     otp_done = models.BooleanField(default=False)
 
-
     def __str__(self):
         return self.user.username
 
@@ -146,7 +146,6 @@ class Seller(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     is_verified = models.BooleanField(default=False)
     otp_done = models.BooleanField(default=False)
-
 
     def __str__(self):
         return self.user.username
@@ -160,7 +159,6 @@ class SiteAdmin(models.Model):
     user = models.OneToOneField(User , on_delete=models.CASCADE)
 
 
-from django.contrib.auth.models import User
 class Document(models.Model):
     description = models.CharField(max_length=255, blank=True)
     document = models.FileField(upload_to='documents/')
@@ -169,10 +167,8 @@ class Document(models.Model):
     
     
     def get_decline_url(self):
-        # print()
         return reverse("core:viewfiles")+'decline/'+str(self.id)
 
 
     def get_accept_url(self):
-        # print()
         return reverse("core:viewfiles")+'accept/'+str(self.id)

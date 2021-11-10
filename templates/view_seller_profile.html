@@ -154,9 +154,9 @@
     <p id="email">{{seller.user.email}}</p>
     
     {% if seller.is_verified == True %}
-    <p id="status">Status: <span id="ver-status">Verified</span></p>
+      <p id="status">Status: <span id="ver-status">Verified</span></p>
     {% else %}
-    <p id="status">Status: <span id="not-ver-status">Not Verified</span></p>
+      <p id="status">Status: <span id="not-ver-status">Not Verified</span></p>
     {% endif %}
     <p id="items">My Products</p>
     <p>You have added the following items:</p>
@@ -164,12 +164,14 @@
       <tr>
         <th><strong>S. No</strong></th>
         <th><strong>Product Name</strong></th>
+        <th><strong>Category</strong></th>
       </tr>
       
       {%for i in selleritems%}
       <tr>
         <td>{{ forloop.counter }}</td>
         <td>{{i.item.title}}</td>
+        <td>{{i.item.get_category_display  }}</td>
       </tr>
       {%endfor%}
     </table>

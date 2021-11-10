@@ -1,7 +1,7 @@
 from django import forms
 from django_countries.fields import CountryField
 from django_countries.widgets import CountrySelectWidget
-from .models import Document, Item
+from .models import Document, Item, CATEGORY_CHOICES
 
 
 PAYMENT_CHOICES = (
@@ -60,12 +60,6 @@ class PaymentForm(forms.Form):
     save = forms.BooleanField(required=False)
     use_default = forms.BooleanField(required=False)
 
-# class NewItemForm(forms.Form):
-#     name = forms.CharField(required=False)
-#     price = forms.FloatField(required=False)
-#     category = forms.CharField(required=False)
-#     description = forms.CharField(required=False)
-#     image= forms.ImageField(required=False)
 
 class NewItemForm(forms.ModelForm):
     class Meta:
@@ -74,7 +68,7 @@ class NewItemForm(forms.ModelForm):
         widgets={
             'title':forms.TextInput(attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
             'price':forms.TextInput(attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
-            'category':forms.TextInput(attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
+            'category':forms.Select(choices=CATEGORY_CHOICES, attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
             'description':forms.Textarea(attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
             'image':forms.FileInput(attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
         }
@@ -99,6 +93,7 @@ class SignUpForm(forms.Form):
         'aria-label': 'Recipient\'s username',
         'aria-describedby': 'basic-addon2'
     }))
+
 
 class LoginForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput(attrs={

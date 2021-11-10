@@ -2,24 +2,24 @@
 
 {% block content %}
 
+<style>
+    /* .row {
+        border: 2px solid red;
+        margin-top: 30px;
+    } */
+</style>
+
 <main class="mt-5 pt-4">
     <div class="container dark-grey-text mt-5">
-        
-        <!--Grid row-->
         <div class="row wow fadeIn">
-            
-            <!--Grid column-->
             <div class="col-md-6 mb-4">
-                
-                <img src="{{ item.image.url }}" class="img-fluid"
-                alt="">
-                
+                <img src="{{ item.image.url }}" class="img-fluid">
             </div>
             <div class="col-md-6 mb-4">
-            
+                
                 <div class="p-4">
                     <div class="mb-3">
-                        <p style="font-size:20px; font-weight:bold;">{{ object.title }}</p>
+                        <p style="font-size:22px; font-weight:bold;">{{ object.title }}</p>
                         <a href="">
                             <span class="badge purple mr-1">{{ object.get_category_display }}</span>
                         </a>
@@ -39,7 +39,6 @@
                     <p class="lead font-weight-bold">Description</p>
                     
                     <p>{{ object.description }}</p>
-                    
                     <a href="{{ object.get_add_to_cart_url }}" class="btn btn-primary btn-md my-0 p">
                         Add to cart
                         <i class="fas fa-shopping-cart ml-1"></i>
@@ -47,7 +46,6 @@
                     <a href="{{ object.get_remove_from_cart_url }}" class="btn btn-danger btn-md my-0 p">
                         Remove from cart
                     </a>
-                    
                 </div>
             </div>
         </div>

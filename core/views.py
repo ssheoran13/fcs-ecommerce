@@ -131,6 +131,7 @@ class CheckoutView(View):
             user = self.request.user
             buyer = Buyer.objects.filter(user=user).first()
             if buyer == None:
+                print("this 1")
                 messages.info(self.request, "You are not a Buyer. Please login as Buyer.")
                 return redirect('/')
             if user == None:
@@ -160,6 +161,7 @@ class CheckoutView(View):
             user = self.request.user
             buyer = Buyer.objects.filter(user=user).first()
             if buyer == None:
+                print("this 2")
                 messages.info(self.request, "You are not a Buyer. Please login as Buyer.")
                 return redirect('/')
             if user == None:
@@ -207,6 +209,7 @@ class PaymentView(View):
         user = self.request.user
         buyer = Buyer.objects.filter(user=user).first()
         if buyer == None:
+            print("this 3")
             messages.info(self.request, "You are not a Buyer. Please login as Buyer.")
             return redirect('/')
         if user == None:
@@ -226,6 +229,7 @@ class PaymentView(View):
         user = self.request.user
         buyer = Buyer.objects.filter(user=user).first()
         if buyer == None:
+            print("this 4")
             messages.info(self.request, "You are not a Buyer. Please login as Buyer.")
             return redirect('/')
         if user == None:
@@ -335,6 +339,12 @@ class HomeView(ListView):
         
         user_object = User.objects.filter(username=user.username).first()
         if user_object == None:
+            if len(self.request.GET):
+                category = self.request.GET.get('category')
+                obj = Item.objects.filter(category=category)
+                print(len(obj))
+                return render(self.request, 'home.html', {'object_list':obj})
+
             return render(self.request, 'home.html', {'object_list':Item.objects.all()})
         
         seller = Seller.objects.filter(user=user).first()
@@ -348,9 +358,20 @@ class HomeView(ListView):
             return redirect('core:adminhome')
 
         elif buyer != None:
+            if len(self.request.GET):
+                category = self.request.GET.get('category')
+                obj = Item.objects.filter(category=category)
+                print(len(obj))
+                return render(self.request, 'home.html', {'object_list':obj})
+
             return render(self.request, 'home.html', {'object_list':Item.objects.all()})
         
         else:
+            if len(self.request.GET):
+                category = self.request.GET.get('category')
+                obj = Item.objects.filter(category=category)
+                print(len(obj))
+                return render(self.request, 'home.html', {'object_list':obj})
             return render(self.request, 'home.html', {'object_list':Item.objects.all()})
 
 def get_category_products(request, category):
@@ -366,8 +387,9 @@ class OrderSummaryView(LoginRequiredMixin, View):
             messages.info(self.request, "Please Log In :D")
             return redirect('core:home')
 
-        seller = Seller.objects.filter(user=user).first()
-        if seller == None:
+        buyer = Buyer.objects.filter(user=user).first()
+        if buyer == None:
+            print("this 5")
             messages.info(self.request, "You are not a buyer. Please login as Buyer.")
             return redirect('/')
         try:

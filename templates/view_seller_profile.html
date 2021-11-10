@@ -1,0 +1,220 @@
+<!DOCTYPE >
+<html>
+<head>
+  {% load static %}
+  {% load cart_template_tags %}
+  <title> </title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+  
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #7a82f3;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+    .profile-container {
+      width: 900px;
+      background-color: #ffffff;
+      position: relative;
+      display: grid;
+      grid-template-columns: 54% 46%;
+      border-radius: 20px;
+      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+      align-items: center;
+      /* font-family: 'Quicksand', sans-serif; */
+      margin-top: 100px;
+      margin-bottom: 50px;
+      padding: 20px;
+    }
+    #profile-heading {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+    #my-profile-img {
+      width: 90%;
+      height: auto;
+    }
+    .container-text {
+      padding: 40px;
+      padding-left: 10px;
+    }
+    #username {
+      color: #2b6777;
+      font-weight: bold;
+      font-size: 22px;
+      margin: 10px 0 10px 0;
+    }
+    #email {
+      font-size: 15px;
+      margin: 10px 0 10px 0;
+    }
+    #items {
+      color: #2b6777;
+      font-weight: bold;
+    }
+    #items-table {
+      width: 90%;
+    }
+    #items-table td, #items-table th {
+      padding: 5px;
+      border-bottom: 1px solid #dddddd;
+      text-align: left;
+    }
+    #ver-status, #not-ver-status {
+      padding: 4px 8px 4px 8px;
+      border-radius: 15px;
+      font-size: 14px;
+      color: white;
+    }
+    #ver-status {
+      background-color: rgb(12, 201, 28);
+    }
+    #not-ver-status {
+      background-color: rgba(255, 0, 0, 0.712);
+    }
+    #go-back {
+      color: white;
+      background-color: #52ab98;
+      border: 2px solid #52ab98;
+      font-size: 13px;
+      padding: 7px 12px 7px 12px;
+      border-radius: 25px;
+      margin-top: 25px;
+      float: right;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #go-back:hover {
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      text-decoration: underline;
+    }
+    footer {
+      width: 100%;
+    }
+    .page-footer {
+      background-color: whitesmoke;
+    }
+    footer.page-footer a {
+      color: #2b6777;
+    }
+  </style>
+</head>
+<body>
+  
+  {% csrf_token %}
+  
+  
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+      
+      <!-- Brand -->
+      <a class="navbar-brand waves-effect" href="#">
+        <img src="{% static 'img/logo.png' %}" style="width:35px; height:35px">
+        <!-- <strong class="blue-text">FCS e-Commerce</strong> -->
+      </a>
+      
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Left -->
+      <ul class="navbar-nav mr-auto"></ul>
+      <!-- Right -->
+      <ul class="navbar-nav nav-flex-icons">
+        {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
+            <span class="clearfix d-none d-sm-inline-block"> Logout </span>
+          </a>
+        </li>                                 
+        {% endif %}
+      </ul>
+    </div>
+    
+  </div>
+</nav>
+
+
+<div class="profile-container">
+  <img id="my-profile-img" src="{% static 'img/seller-my-profile.jpg' %}">
+  <div class="container-text">
+    <h1 id="profile-heading">My Profile</h1>
+    <hr>
+    <p id="username">{{seller.user.username}}</p>
+    
+    <p id="email">{{seller.user.email}}</p>
+    
+    {% if seller.is_verified == True %}
+      <p id="status">Status: <span id="ver-status">Verified</span></p>
+    {% else %}
+      <p id="status">Status: <span id="not-ver-status">Not Verified</span></p>
+    {% endif %}
+    <p id="items">My Products</p>
+    <p>You have added the following items:</p>
+    <table id="items-table">
+      <tr>
+        <th><strong>S. No</strong></th>
+        <th><strong>Product Name</strong></th>
+      </tr>
+      
+      {%for i in selleritems%}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{i.item.title}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+    <a href="{% url 'core:sellerhome' %}" id="go-back">Back</a>
+  </div>
+</div>
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+  
+  <hr class="my-4">
+  
+  <!-- Social icons -->
+  <div class="pb-4">
+    <a href="" target="_blank">
+      <i class="fab fa-facebook-f mr-3"></i>
+    </a>
+    
+    <a href="" target="_blank">
+      <i class="fab fa-twitter mr-3"></i>
+    </a>
+    
+    <a href="" target="_blank">
+      <i class="fab fa-youtube mr-3"></i>
+    </a>
+    
+    <a href="" target="_blank">
+      <i class="fab fa-github mr-3"></i>
+    </a>
+    
+    <a href="" target="_blank">
+      <i class="fab fa-instagram mr-3"></i>
+    </a>
+  </div>
+  
+  <div class="footer-copyright py-3">
+    <a href="#" target="_blank"><strong></strong>G17</strong></a>
+  </div>
+  
+</footer>
+</body>
+</html>

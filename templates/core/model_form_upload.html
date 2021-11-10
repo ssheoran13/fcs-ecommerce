@@ -1,0 +1,78 @@
+{% extends "base.html"%}
+{% load static %}
+{% load cart_template_tags %}
+{% block content %}
+
+<style>  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+  .profile-container {
+    width: 850px;
+    background-color: #ffffff;
+    position: relative;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    border-radius: 20px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+  }
+  #profile-heading {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+  #my-profile-img {
+    width: 90%;
+    height: auto;
+  }
+  .container-text {
+    padding: 40px;
+    padding-left: 10px;
+  }
+  .sub-btn {
+    font-size: 14px;
+    padding: 6px 10px 6px 10px;
+    border: 2px solid #2b6777;
+    background-color: #2b6777;
+    color: white;
+    border-radius: 15px;
+    margin-right: 10px;
+  }
+  .sub-btn:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  footer {
+    width: 100%;
+  }
+</style>
+
+<div class="hero-img">
+  <div class="profile-container">
+    <div class="container-text">
+      <h1 id="profile-heading">Get Verified</h1><hr>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <p style="font-size: 15px;">Description: {{ form.description }}</p>
+        <p style="font-size: 15px;">Upload File: {{ form.document }}</p>
+        <button class="sub-btn" type="submit">Upload</button>
+        <a class="sub-btn" href="{% url 'core:sellerhome' %}"><strong>Return to Home</strong></a>
+      </form>
+    </div>
+    <img id="my-profile-img" src="{% static 'img/verification.jpg' %}">
+  </div>
+</div>
+
+{% comment %} <p><a href="{% url '/' %}">Return to home</a></p> {% endcomment %}
+{% endblock %}

@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<style>
+  .card {
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  h3 {
+    font-size: 18.5px;
+  }
+  .md-form {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+  input, label {
+    margin: 0px;
+  }
+  input {
+    font-size: 14px;
+  }
+  .brand-title {
+    margin: 20px 0 20px 0;
+    font-size: 26px;
+    text-align: center;
+  }
+  .btn-block {
+    width: 50%;
+    color: white;
+    background-color: #2b6777;
+  }
+  .btn-block:hover {
+    color: white;
+    text-decoration: underline;
+  }
+</style>
+
+<main >
+  <div class="container wow fadeIn">
+    <div class="brand-title">CHECKOUT FORM</div><hr>
+    <div class="row">
+      <div class="col-md-8 mb-4">
+        <div class="card">
+          
+          <form method="POST" class="card-body" action="">
+            {% csrf_token %}
+            
+            <h3>Shipping Address</h3>
+            
+            <div class='hideable_shipping_form'>
+              
+              <div class="md-form mb-5">
+                <input type='text' placeholder='apartment or suite' id='shipping_address' name='shipping_address' class='form-control' />
+                <label for="street_address" class=""></label>
+              </div>
+              
+              <div class="md-form mb-5">
+                <input type='text' placeholder='street name' id='shipping_address2' name='shipping_address2' class='form-control' />
+                <label for="apartment_address" class=""></label>
+              </div>
+              
+              <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4">˙
+                  <label for="country">Country</label>
+                  {{ form.shipping_country }}
+                  <div class="invalid-feedback">
+                    Please select a valid country.
+                  </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <label for="zip">Zip</label>
+                  <input type='text' placeholder='Zip code' id='shipping_zip' name='shipping_zip' class='form-control' />
+                  <div class="invalid-feedback">
+                    Zip code required.
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <hr>               
+            <h3>Payment Option</h3>
+            
+            <div class="d-block my-3">
+              {% for value, name in form.fields.payment_option.choices %}
+              <div class="custom-control custom-radio">
+                <input id="{{ name }}" name="payment_option" value="{{ value }}" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" for="{{ name }}">{{ name }}</label>
+              </div>
+              {% endfor %}
+            </div>
+            
+            <hr class="mb-4">
+            <button class="btn btn-md btn-block" type="submit">Continue to Checkout</button>
+            
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        {% include "order_snippet.html" %}
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock content %}
+
+{% block extra_scripts %}
+<script>
+  var hideable_shipping_form = $('.hideable_shipping_form');
+  var hideable_billing_form = $('.hideable_billing_form');
+  
+  // var use_defaulz_billing = document.querySelector("input[name=use_default_billing]");
+  
+  use_default_shipping.addEventListener('change', function() {
+    if (this.checked) {
+      hideable_shipping_form.hide();
+    } else {
+      hideable_shipping_form.show();
+    }
+  })
+  
+  use_default_billing.addEventListener('change', function() {
+    if (this.checked) {
+      hideable_billing_form.hide();
+    } else {
+      hideable_billing_form.show();
+    }
+  })
+  
+</script>
+{% endblock extra_scripts %}

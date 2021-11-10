@@ -1,0 +1,83 @@
+{% extends "base.html"%}
+{% load static %}
+{% load cart_template_tags %}
+{% block content %}
+
+<style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap'); */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+    }
+    .global-container {
+        font-family: 'Quicksand', sans-serif;
+        width: 900px;
+        background-color: #ffffff;
+        position: relative;
+        display: grid;
+        grid-template-columns: 54% 46%;
+        border-radius: 20px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+        align-items: center;
+        /* font-family: 'Quicksand', sans-serif; */
+        margin-top: 60px;
+        margin-bottom: 50px;
+        padding: 40px 20px 40px 20px;
+    }
+    #my-profile-img {
+        width: 88%;
+        height: auto;
+    }
+    .container-text {
+        margin-right: 40px;
+    }
+    label, input {
+        font-size: 14px;
+    }
+    footer {
+        width: 100%;
+    }
+</style>
+
+
+<div class="global-container">
+    <img id="my-profile-img" src="{% static 'img/login2.jpg' %}">
+    <div class="container-text">
+        <h3 class="card-title text-center">Register As A Buyer</h3><hr>
+        <div class="card-text">
+            
+            <form method="post" action="">
+                {%  csrf_token %}
+                
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input type="text" name="username" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" name="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control form-control-sm" id="exampleInputPassword1">
+                </div>
+                <a href="#" style="float:right;font-size:12px;margin-bottom:5px">Forgot password?</a>
+                
+                <button type="submit" class="btn btn-primary btn-block mt-2" style="width:50%;">Sign Up</button>
+                
+                <div class="sign-up mt-2" style="font-size: 12px;">
+                    Already have an account? <a href="{% url 'core:login_buyer'%}">Login</a>
+                </div>
+            </form>
+        </div> 
+    </div>
+</div>
+
+
+{% endblock %}

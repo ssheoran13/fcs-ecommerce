@@ -1,0 +1,182 @@
+<!DOCTYPE >
+<html>
+<head>
+    {% load static %}
+    {% load cart_template_tags %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            /* background-color: #52ab98; */
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+        }
+        .seller-home-container {
+            width: 1000px;
+            background-color: #ffffff;
+            position: relative;
+            display: grid;
+            grid-template-columns: 52% 48%;
+            align-items: center;
+            font-family: 'Quicksand', sans-serif;
+            margin-top:35px;
+            margin-bottom: 50px;
+            padding-top: 50px;
+        }
+        #seller-home-img {
+            width: 90%;
+            height: auto;
+        }
+        #welcome {
+            font-size: 26px;
+            font-weight: bold;
+            color: #2b6777;
+            margin-bottom: 10px;
+        }
+        .page-text {
+            margin: 20px 0 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        .page-text:nth-child(odd) {
+            background-color: whitesmoke;
+        }
+        .page-text:hover {
+            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        }
+        #add-new-item, #view-my-profile, #get-verified {
+            color: rgba(0, 0, 255, 0.589);
+            font-weight: bold;
+        }
+        #add-new-item:hover, #view-my-profile:hover, #get-verified:hover {
+            color: rgba(7, 7, 133, 0.774);
+        }
+        
+        footer {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="mt-5 pt-4">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    {% csrf_token %}
+    
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+        <div class="container">
+            
+            <!-- Brand -->
+            <a class="navbar-brand waves-effect" href="#">
+                <img src="{% static 'img/logo.png' %}" style="width:35px; height:35px">
+                <!-- <strong class="blue-text">FCS e-Commerce</strong> -->
+            </a>
+            
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+                {% if request.user.is_authenticated %}
+                
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
+                        <span class="clearfix d-none d-sm-inline-block">Logout</span>
+                    </a>
+                </li>                                 
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <div class="seller-home-container">
+        
+        <img id="seller-home-img" src="{% static 'img/seller-home-page.jpg' %}">
+        <div class="container-text">
+            <p id="welcome">Welcome, {{seller.user.username}}!</p>
+            <div class="page-text">
+                <p>To start selling your products, you need to be verified.</p>
+                <p><a id="get-verified" href="{% url 'core:uploadfile' %}">Get Verified</a></p>
+            </div>
+            <div class="page-text">
+                <p>Once verified, you can start adding your products to our website.</p>
+                <p><a id="add-new-item" href="{% url 'core:add-new-item' %}">Add New Item</a></p>
+            </div>
+            <div class="page-text">
+                <p>You can also view your profile.</p>
+                <p><a id="view-my-profile"  href="{% url 'core:viewseller' %}">My Profile</a></p> 
+            </div>   
+        </div>
+        
+    </div>
+    
+    
+    
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+        
+        <hr class="my-4">
+        
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="" target="_blank">
+                <i class="fab fa-facebook-f mr-3"></i>
+            </a>
+            
+            <a href="" target="_blank">
+                <i class="fab fa-twitter mr-3"></i>
+            </a>
+            
+            <a href="" target="_blank">
+                <i class="fab fa-youtube mr-3"></i>
+            </a>
+            
+            <a href="" target="_blank">
+                <i class="fab fa-github mr-3"></i>
+            </a>
+            
+            <a href="" target="_blank">
+                <i class="fab fa-instagram mr-3"></i>
+            </a>
+            
+            
+        </div>
+        <!-- Social icons -->
+        
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            <a href="#" target="_blank"><strong>G17</strong></a>
+        </div>
+    </footer>
+    
+</body>
+</html>

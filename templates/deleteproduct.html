@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+
+<head>
+  <style type="text/css">
+    body {
+      margin: 0;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      place-items: center;
+      background-color: rgba(255, 255, 255, 0.932);
+    }
+    .add-new-item-container {
+      display: grid;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      place-items: center;
+      position: relative;
+      grid-template-columns: 30% 70%;
+    }
+    .add-new-item-form {
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      border-radius: 10px;
+      padding: 35px;
+      padding-left: 0px;
+      box-sizing: border-box;
+      background: #ffffff;
+    }
+    .go-back {
+      font-size: 13px;
+      margin: 25px;
+      padding: 10px;
+      background-color: #2b6777;
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .go-back:hover {
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      text-decoration: underline;
+      color: white;
+    }
+    #sub-btn {
+      padding: 6px 10px 6px 10px;
+      color: black;
+      background-color: whitesmoke;
+      border: 2px solid whitesmoke;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #sub-btn:hover {
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+    .brand-title {
+      margin-bottom: 15px;
+      font-size: 26px;
+    }
+    h1 {
+      font-size: 22px;
+    }
+    #uploaded-files {
+      margin-top: 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #uploaded-files td, #uploaded-files th {
+      border-bottom: 1px solid rgba(233, 230, 230, 0.767);
+      padding: 8px 10px 8px 10px;
+      font-size: 14px;
+    }
+    #uploaded-files th {
+      background-color: #2b6777;
+      color: white;
+    }
+    #my-profile-img {
+      width: 100%;
+      height: auto;
+      background-size: cover;
+    }  
+    form {
+      margin-top: 20px;
+      font-size: 15px;
+    }  
+    #inp-btn {
+      border: 1px solid rgb(83, 82, 82);
+      padding: 4px;
+      font-size: 12px;
+      background-color: #effbff;
+    }
+  </style>
+</head>
+
+<div class="add-new-item-container">
+  <img id="my-profile-img" src="{% static 'img/admin-bg.png' %}">
+  <div class="add-new-item-form">
+    <div class="brand-title">Welcome, Admin!</div><hr>
+    <h1>Product List</h1>
+    <table id='uploaded-files'>
+      <tr>
+        <th>S. No.</th>
+        <th>Item Name</th>
+        <th>Seller Username</th>
+      </tr>
+      {% for item in object_list %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ item.0.title }}</td>
+        <td>{{item.1}}</td>
+        {% endfor %}
+      </tr>
+    </table>
+    
+    <form method="POST" > 
+      {% csrf_token %}
+      <label>Enter the product you want to delete:</label>
+      <input id="inp-btn" type='text' name='title_'/><br><br>
+      <input id="sub-btn" type="submit" name="Submit"/>
+    </form>
+
+    <a class="btn go-back" href="{% url 'core:siteadmin' %}">Delete Users</a>
+    <a class="btn go-back" href="{% url 'core:viewfiles' %}">Verify Seller</a>
+    <a class="btn go-back" href="{% url 'core:adminhome' %}">Back</a>
+  </div>
+</div>
+
+
+{% endblock content %}

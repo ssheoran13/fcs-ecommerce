@@ -1,0 +1,22 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>
+</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+{% csrf_token %}
+<a class="nav-link waves-effect" href="{% url 'core:siteadmin' %}">
+                        <span class="clearfix d-none d-sm-inline-block"> Delete Users </span>
+                    </a>
+<p></p>
+<a class="nav-link waves-effect" href="{% url 'core:deleteproduct' %}">
+                        <span class="clearfix d-none d-sm-inline-block"> Delete Product </span>
+                    </a>
+<p></p>
+<a class="nav-link waves-effect" href="{% url 'core:viewfiles' %}">
+                        <span class="clearfix d-none d-sm-inline-block"> Verify Sellers </span>
+                    </a>
+</body>
+</html>

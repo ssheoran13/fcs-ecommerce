@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<head>
+    <style type="text/css">
+        body {
+            margin: 0;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            place-items: center;
+            background-color: rgba(255, 255, 255, 0.932);
+        }
+        .add-new-item-container {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            place-items: center;
+            position: relative;
+            padding: 50px;            
+        }
+        .add-new-item-form {
+            width: 900px;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            border-radius: 10px;
+            padding: 35px;
+            box-sizing: border-box;
+            background: #ffffff;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+        #go-back {
+            float: right;
+            font-size: 13px;
+            margin-top: 25px;
+            padding: 8px;
+            background-color: #2b6777;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #go-back:hover {
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            text-decoration: underline;
+        }
+        .add-new-item-form:hover {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        .brand-title {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        #uploaded-files {
+            margin-top: 20px;
+            width: 100%;
+        }
+        #uploaded-files td, #uploaded-files th {
+            border: 0.5px solid rgb(243, 241, 241);
+            padding: 8px 10px 8px 10px;
+            font-size: 14px;
+        }
+        #uploaded-files th {
+            background-color: #2b6777;
+            color: white;
+        }
+        #accept-seller, #decline-seller {
+            color: white;
+            font-size: 12px;
+            padding: 8px;
+            
+            box-shadow: rgba(0, 0, 0, 0.021) 0px 6px 10px, rgba(0, 0, 0, 0.075) 0px 4px 4px;
+        }
+        #accept-seller {
+            background: rgb(6, 153, 6);
+            margin-right: 3px;
+        }
+        #decline-seller {
+            background: rgb(231, 27, 27);
+            margin-left: 3px;
+        }
+        #accept-seller:hover, #decline-seller:hover {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 2px;
+        }
+        
+    </style>
+</head>
+
+<div class="add-new-item-container">
+    <div class="add-new-item-form">
+        <div class="brand-title">All Uploaded Files</div><hr>
+        <table id='uploaded-files'>
+            <tr>
+                <th>S.No</th>
+                <th>File Name</th>
+                <th>File Size</th>
+                <th>Upload Time</th>
+                <th>User</th>
+                <th>Action</th>
+                <th>ID</th>
+            </tr>
+            
+            {% for document in documents %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><a href="{{ document.document.url }}">{{ document.document.name }}</a></td>
+                <td>{{ document.document.size|filesizeformat }}</td>
+                <td>{{document.uploaded_at}}</td>
+                <td>{{ document.user }}</td>
+                <td><a id="accept-seller" href=" {{document.get_accept_url}} ">Accept</a>
+                    <a id="decline-seller" href=" {{document.get_decline_url}}">Decline</a></td>
+                    <td>{{ document.id }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <a href="{% url 'core:adminhome' %}" id="go-back">Go Back</a>
+        </div>
+        
+    </div>
+    
+    {% endblock %}

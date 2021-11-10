@@ -33,7 +33,6 @@
       border-radius: 20px;
       box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
       align-items: center;
-      /* font-family: 'Quicksand', sans-serif; */
       margin-top: 100px;
       margin-bottom: 50px;
       padding: 20px;
@@ -115,27 +114,21 @@
   
   {% csrf_token %}
   
-  
   <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
       
-      <!-- Brand -->
       <a class="navbar-brand waves-effect" href="#">
         <img src="{% static 'img/logo.png' %}" style="width:35px; height:35px">
-        <!-- <strong class="blue-text">FCS e-Commerce</strong> -->
       </a>
-      
-      <!-- Collapse -->
+  
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     
-    <!-- Links -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Left -->
       <ul class="navbar-nav mr-auto"></ul>
-      <!-- Right -->
+
       <ul class="navbar-nav nav-flex-icons">
         {% if request.user.is_authenticated %}
         <li class="nav-item">
@@ -161,9 +154,9 @@
     <p id="email">{{seller.user.email}}</p>
     
     {% if seller.is_verified == True %}
-      <p id="status">Status: <span id="ver-status">Verified</span></p>
+    <p id="status">Status: <span id="ver-status">Verified</span></p>
     {% else %}
-      <p id="status">Status: <span id="not-ver-status">Not Verified</span></p>
+    <p id="status">Status: <span id="not-ver-status">Not Verified</span></p>
     {% endif %}
     <p id="items">My Products</p>
     <p>You have added the following items:</p>
@@ -183,38 +176,19 @@
     <a href="{% url 'core:sellerhome' %}" id="go-back">Back</a>
   </div>
 </div>
-
 <footer class="page-footer text-center font-small mt-4 wow fadeIn">
-  
   <hr class="my-4">
-  
-  <!-- Social icons -->
   <div class="pb-4">
-    <a href="" target="_blank">
-      <i class="fab fa-facebook-f mr-3"></i>
-    </a>
-    
-    <a href="" target="_blank">
-      <i class="fab fa-twitter mr-3"></i>
-    </a>
-    
-    <a href="" target="_blank">
-      <i class="fab fa-youtube mr-3"></i>
-    </a>
-    
-    <a href="" target="_blank">
-      <i class="fab fa-github mr-3"></i>
-    </a>
-    
-    <a href="" target="_blank">
-      <i class="fab fa-instagram mr-3"></i>
-    </a>
+    <a href=""><i class="fab fa-facebook-f mr-3"></i></a>
+    <a href=""><i class="fab fa-twitter mr-3"></i></a>
+    <a href=""><i class="fab fa-youtube mr-3"></i></a>
+    <a href=""><i class="fab fa-instagram mr-3"></i></a>
   </div>
-  
   <div class="footer-copyright py-3">
-    <a href="#" target="_blank"><strong></strong>G17</strong></a>
+    <a href="#"><strong>G17</strong></a>
+    <p style="font-size:11px">Vector Art from: <a href="https://www.vecteezy.com" style="font-size:11px">vecteezy.com</a></p>
   </div>
-  
 </footer>
+
 </body>
 </html>

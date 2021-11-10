@@ -802,7 +802,17 @@ def verify_buyer(request,auth_token):
         print(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
-
+def build_link_forgot_password(path):
+    count = 0
+    ans = ""
+    i = 0
+    while count<3:
+        if path[i] == '/':
+            count += 1
+        ans += path[i]
+        i += 1
+    ans+="reset_password"
+    return ans
 
 def build_link(path,auth_token,type):
     count = 0
@@ -816,7 +826,12 @@ def build_link(path,auth_token,type):
     ans+="otp-"+type+"/"+auth_token
     return ans
 
-        
+def send_email_forgot_password(email,link):
+    subject = 'Reset Password'
+    message = 'Click on the link to reset your password \n'+link
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = [email]
+    send_mail( subject, message, email_from, recipient_list )     
 
 def send_email(email,link):
     subject = 'Activate your account'
@@ -1091,3 +1106,43 @@ def adminhome(request):
 
 def rate_limit(request):
     return render(request, 'rate_limit.html')
+
+def forgot_password(request):
+    try:
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            user = User.objects.filter(username=username).first()
+            if user is None:
+                messages.error(request, 'User Does Not Exist')
+                return redirect('core:home')
+            else:
+                link = request.build_absolute_uri()
+                link = build_link_forgot_password(link)
+                send_email_forgot_password(user.email,link)
+                messages.success(request, 'Email Sent to reset your password')
+                return redirect('core:home')
+        return render(request, 'forgot_password.html')
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')
+
+def reset_password(request):
+    try:
+        if request.method == 'POST':
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = User.objects.filter(username=username).first()
+            if user is None:
+                messages.error(request, 'User Does Not Exist')
+                return redirect('core:home')
+            else:
+                user.set_password(password)
+                user.save()
+                messages.success(request, 'Password Changed Successfully')
+                return redirect('core:home')
+        return render(request, 'reset_password.html')
+    except Exception as e:
+        print(e)
+        messages.error(request, "Some Error Occurred")
+        return redirect('core:home')

@@ -7,6 +7,7 @@ from .views import (
     HomeView,
     OrderSummaryView,
     add_to_cart,
+    forgot_password,
     login_admin,
     login_buyer,
     login_seller,
@@ -16,6 +17,7 @@ from .views import (
     add_coupon,
     add_new_item,
     AddNewItemView,
+    reset_password,
     signup_buyer,
     signup_seller,
     verify_buyer,
@@ -31,7 +33,8 @@ from .views import (
     login_admin,
     adminhome,
     get_category_products,
-    rate_limit
+    rate_limit,
+    reset_password
 )
 
 
@@ -66,5 +69,7 @@ urlpatterns = [
     path("login_admin/", login_admin, name="login_admin"),
     path("adminhome/", adminhome, name="adminhome"),
     path("home/<category>", get_category_products, name="get_category_products"),
-    path("ratelimit/", rate_limit, name="ratelimit")
+    path("ratelimit/", rate_limit, name="ratelimit"),
+    path("forgot_password/", forgot_password, name="forgot_password"),
+    path("reset_password/", reset_password, name="reset_password")
 ]

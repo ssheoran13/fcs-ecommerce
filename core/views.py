@@ -983,7 +983,7 @@ def siteadmin(request):
 
         if request.method == 'POST':
             user_name = request.POST.get('user_name')
-            user = User.objects.get(username = user_name)
+            user = User.objects.filter(username = user_name).first()
             user.delete()
             return redirect('core:siteadmin')
 
@@ -1025,7 +1025,7 @@ def deleteproduct(request):
         if request.method == 'POST':
             title_ = request.POST.get('title_')
             print(title_)
-            title = Item.objects.get(title = title_)
+            title = Item.objects.filter(title = title_).first()
 
             print(title)
             title.delete()

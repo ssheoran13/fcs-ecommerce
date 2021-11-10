@@ -19,11 +19,22 @@
         margin-top: 10px
     }
     .card {
-        /* border: 2px solid red; */
         border-radius: 10px;
+    }
+    .card:hover {
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     }
     .form-control {
         font-size: 13px;
+    }
+    .dark-grey-text {
+        font-size: 18px;
+    }
+    .dark-grey-text:hover {
+        text-decoration: underline;
+    }
+    .grey-text {
+        font-size: 14px;
     }
 </style>
 
@@ -32,14 +43,12 @@
         
         <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
             <span class="navbar-brand">CATEGORIES</span>
-            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
             aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         
         <div class="collapse navbar-collapse" id="basicExampleNav">
-            
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Clothes</a>
@@ -50,9 +59,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Stationery</a>
                 </li>
-                
             </ul>
-            <!-- Links -->
             
             <form class="form-inline" method="post" action="" id="search_product" style="float:right">
                 {% csrf_token %}
@@ -69,9 +76,7 @@
             
             {% for item in object_list %}
             <div class="col-lg-3 col-md-6 mb-4">
-                
                 <div class="card">
-                    
                     <div class="view overlay">
                         <!-- <img src="{{ item.image.url }}" class="card-img-top"> -->
                         <a href="{{ item.get_absolute_url }}">
@@ -80,18 +85,17 @@
                     </div>
                     
                     <div class="card-body text-center">
-                        <a href="" class="grey-text">
-                            <h5>{{ item.get_category_display }}</h5>
-                        </a>
                         <h5>
                             <strong>
                                 <a href="{{ item.get_absolute_url }}" class="dark-grey-text">{{ item.title }}
-                                    <!-- <span class="badge badge-pill {{ item.get_label_display }}-color">NEW</span> -->
                                 </a>
                             </strong>
-                        </h5>
+                        </h5><hr>
+                        <a href="" class="grey-text">
+                            {{ item.get_category_display }}
+                        </a>
                         
-                        <h4 class="font-weight-bold blue-text">
+                        <h4 class="font-weight-bold" style="color:#2b6777">
                             <strong>₹
                                 {% if item.discount_price %}
                                 {{ item.discount_price }}
@@ -100,19 +104,13 @@
                                 {% endif %}
                             </strong>
                         </h4>
-                        
                     </div>
-                    
                 </div>
-                
             </div>
             {% endfor %}
         </div>
         
     </section>
-    <!--Section: Products v.3-->
-    
-    <!--Pagination-->
     
     {% if is_paginated %}
     <nav class="d-flex justify-content-center wow fadeIn">

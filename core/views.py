@@ -360,7 +360,7 @@ class HomeView(ListView):
     paginate_by = 12
     template_name = "home.html"
     search_query = ""
-    @method_decorator(ratelimit(key='ip', rate='1/m', method='POST'))
+    @method_decorator(ratelimit(key='ip', rate='60/m', method='POST'))
     def post(self, *args, **kwargs):
         try:
             print(self.model)
@@ -378,7 +378,7 @@ class HomeView(ListView):
             messages.error(self.request, "Some Error Occurred")
             return redirect('core:home')
 
-    @method_decorator(ratelimit(key='ip', rate='5/m'))
+    @method_decorator(ratelimit(key='ip', rate='60/m'))
     def get(self, *args, **kwargs):
         try:
             user = self.request.user
@@ -553,7 +553,6 @@ class AddNewItemView(LoginRequiredMixin, View):
             return redirect('core:sellerhome')
 
 @ratelimit(key='ip', rate='60/m')
-
 def add_to_cart(request, slug):
     try:
         user = request.user

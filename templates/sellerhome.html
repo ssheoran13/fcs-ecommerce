@@ -107,12 +107,17 @@
             <!-- Right -->
             <ul class="navbar-nav nav-flex-icons">
                 {% if request.user.is_authenticated %}
-                
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="#">
+                        <span class="clearfix d-none d-sm-inline-block">{{request.user.username}}</span>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
                         <span class="clearfix d-none d-sm-inline-block">Logout</span>
                     </a>
-                </li>                                 
+                </li>    
+                                             
                 {% endif %}
             </ul>
         </div>
@@ -123,7 +128,7 @@
         
         <img id="seller-home-img" src="{% static 'img/seller-home-page.jpg' %}">
         <div class="container-text">
-            <p id="welcome">Welcome, {{seller.user.username}}!</p>
+            <p id="welcome">Welcome, {{request.user.username}}!</p>
             <div class="page-text">
                 <p>To start selling your products, you need to be verified.</p>
                 <p><a id="get-verified" href="{% url 'core:uploadfile' %}">Get Verified</a></p>

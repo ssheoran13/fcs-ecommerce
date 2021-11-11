@@ -1,0 +1,2021 @@
+ * Debugger is active!
+
+ * Debugger PIN: 156-835-201
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:18] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:19] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:25] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:26] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:27] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:27] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:27] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:27] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:27] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:27] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:27] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:27] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 19:15:27] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /media/kurta.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /media/iphone.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /media/macbook.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /media/eraser.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "GET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "GET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "GET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:26] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:36] "GET /?category=S HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:36] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:37] "GET /?category=SW HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:37] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:38] "GET /?category=OW HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:38] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:39] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:39] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:41] "GET /login_buyer/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:41] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:41] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:41] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:41] "GET /static/img/login2.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:41] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:45] "GET /signup_buyer/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:45] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:47] "GET /signup_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:48] "GET /static/img/login1.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:48] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:49] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:49] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:54] "GET /signup_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:18:54] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:19:19] "[32mPOST /signup_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [10/Nov/2021 20:19:19] "GET /signup_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:19:19] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:08] "[32mGET /otp-seller/c952ceb6-ddaa-4781-b75c-a9908ac0e6aa HTTP/1.1[0m" 301 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:08] "[32mGET /otp-seller/c952ceb6-ddaa-4781-b75c-a9908ac0e6aa/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[36mGET /static/js/keyboard.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[36mGET /static/img/login1.jpg HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "GET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "GET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "GET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:12] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:51] "[32mPOST /login_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:52] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:52] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:55] "GET /viewseller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:20:56] "GET /static/img/seller-my-profile.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:01] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:01] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "[36mGET /static/css/keyboard.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "GET /static/img/logo.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:27] "[36mGET /static/img/login1.jpg HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:36] "[32mPOST /login_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:36] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:39] "GET /uploadfile/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:39] "GET /static/img/verification.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:39] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:21:58] "POST /uploadfile/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:01] "GET /accounts/logout/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:01] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:03] "GET /accounts/logout/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:03] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:05] "[32mPOST /accounts/logout/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:05] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:05] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:06] "GET /login_admin/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:06] "GET /static/img/login3.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:06] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:13] "[32mPOST /login_admin/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:13] "GET /adminhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:13] "[36mGET /static/img/login2.jpg HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:15] "GET /viewfiles/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:16] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:17] "GET /media/documents/dipA3_nUZa9aK.pdf HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:22] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:34] "[32mGET /viewfiles/accept/15 HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:34] "GET /adminhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:34] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:34] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:34] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:36] "GET /accounts/logout/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:36] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:36] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:36] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:36] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:38] "[32mPOST /accounts/logout/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:38] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:38] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:40] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:40] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:40] "[36mGET /static/css/keyboard.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:40] "[36mGET /static/js/keyboard.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:40] "[36mGET /static/img/login1.jpg HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:40] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:48] "[32mPOST /login_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:48] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:48] "[36mGET /static/img/seller-home-page.jpg HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:51] "GET /viewseller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:51] "[36mGET /static/img/seller-my-profile.jpg HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:53] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:54] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [10/Nov/2021 20:22:54] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+ * Detected change in '/home/iiitd/fcs-ecommerce/env/lib/python3.6/site-packages/_virtualenv.py', reloading
+
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+Django version 3.0, using settings 'ecommerce.settings'
+Development server is running at https://192.168.3.38:8000/
+Using the Werkzeug debugger (http://werkzeug.pocoo.org/)
+Quit the server with CONTROL-C.
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+1
+False
+2
+False
+1
+False
+https://192.168.3.38:8000/signup_seller/
+False
+documents/dipA3_nUZa9aK.pdf
+True
+False
+ * Debugger is active!
+
+ * Debugger PIN: 156-835-201
+
+192.168.1.99 - - [11/Nov/2021 06:26:22] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:22] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:23] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:23] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:23] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:23] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:23] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:23] "GET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:23] "GET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:24] "GET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:24] "GET /media/eraser.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:24] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:24] "GET /static/img/logo.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:24] "GET /media/iphone.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:24] "GET /media/macbook.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:24] "GET /media/kurta.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:27] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:28] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:32] "[32mGET /admin HTTP/1.1[0m" 301 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:33] "[32mGET /admin/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:33] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:33] "[35m[1mGET /static/admin/css/base.css HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:33] "[35m[1mGET /static/admin/css/login.css HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:33] "[35m[1mGET /static/admin/css/responsive.css HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:36] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:36] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:36] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:36] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:37] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:37] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:37] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:37] "GET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:37] "GET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:37] "GET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:37] "GET /media/eraser.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:38] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:38] "GET /static/img/logo.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:38] "GET /media/iphone.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:38] "GET /media/macbook.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:38] "GET /media/kurta.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:40] "GET /login_admin/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:40] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:40] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:40] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:26:40] "GET /static/img/login3.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:00] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:01] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:01] "GET /media/iphone.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:01] "GET /media/macbook.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:01] "GET /media/kurta.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:01] "GET /media/eraser.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:13] "GET /login_buyer/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:13] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:13] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:13] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:13] "GET /static/img/login2.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:15] "GET /forgot_password/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:15] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:15] "GET /static/img/login3.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:29] "[32mPOST /forgot_password/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:29] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:29] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:29] "GET /media/iphone.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:30] "GET /media/macbook.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:30] "GET /media/kurta.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:30] "GET /media/eraser.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:53] "[32mGET /reset_password HTTP/1.1[0m" 301 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:53] "GET /reset_password/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:54] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:54] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:54] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:54] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:54] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:54] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:54] "GET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:54] "GET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:55] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:55] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:55] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:55] "GET /static/img/logo.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:27:55] "GET /static/img/login2.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:04] "[32mPOST /reset_password/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:04] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:04] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:05] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:05] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:05] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:05] "GET /media/iphone.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:05] "GET /media/macbook.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:05] "GET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:05] "GET /media/eraser.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:28:05] "GET /media/kurta.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:17] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:17] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:17] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:17] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:17] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:17] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:17] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:18] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:18] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:18] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:18] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:18] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:18] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:18] "GET /static/img/login1.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:29] "[32mPOST /login_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:29] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:29] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:30] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:30] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:30] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:30] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:33] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:29:34] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:30] "POST /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:30] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:30] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:30] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:31] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:31] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:31] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:31] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:32] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:37] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:38] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:38] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:38] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:38] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:38] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:38] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:39] "GET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:39] "GET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:39] "GET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:39] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:39] "GET /static/img/logo.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:46] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:47] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:47] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:47] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:47] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:47] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:47] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:31:47] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:35] "POST /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:35] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:35] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:35] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:36] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:36] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:37] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:37] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:37] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:44] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:44] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:44] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:44] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:45] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:45] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:45] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:45] "GET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:45] "GET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:45] "GET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:32:45] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:14] "POST /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:15] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:15] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:15] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:15] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:15] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:16] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:16] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:16] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:19] "GET /accounts/logout/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:19] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:19] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:19] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:20] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:20] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:20] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:20] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:22] "[32mPOST /accounts/logout/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:22] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:23] "GET /media/test-img-3_6rpFUOM.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:23] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:23] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:23] "GET /media/iphone.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:23] "GET /media/macbook.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:23] "GET /media/kurta.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:24] "GET /media/eraser.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:24] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:27] "GET /login_buyer/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:28] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:28] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:28] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:28] "GET /static/img/login2.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:28] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:29] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:29] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:29] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:30] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:30] "GET /media/test-img-3_6rpFUOM.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:30] "GET /media/iphone.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:30] "GET /media/macbook.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:30] "GET /media/kurta.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:30] "GET /media/eraser.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:31] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:34:31] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:01] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:02] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:02] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:02] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:02] "GET /static/img/login1.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:10] "[32mPOST /login_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:10] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:10] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:24] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:24] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:24] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:24] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:24] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:25] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:25] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:25] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:57] "POST /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:57] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:57] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:57] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:35:58] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:36:01] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:36:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:36:02] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:36:02] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:36:02] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:36:02] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:36:02] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:36:02] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:51] "POST /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:52] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:52] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:52] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:52] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:52] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:53] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:53] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:53] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:55] "GET /accounts/logout/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:56] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:56] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:56] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:56] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:57] "[32mPOST /accounts/logout/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:57] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:58] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:58] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:58] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:58] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:58] "GET /media/iphone.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:58] "GET /media/macbook.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:59] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:59] "GET /media/kurta.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:59] "GET /media/eraser.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:59] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:59] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:59] "GET /media/test-img-3_6rpFUOM.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:39:59] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:11] "GET /login_admin/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:11] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:11] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:11] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:12] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:12] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:12] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:12] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:12] "GET /static/img/login3.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:19] "[32mPOST /login_admin/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:19] "GET /adminhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:20] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:20] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:20] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:20] "GET /static/img/login2.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:23] "GET /deleteproduct/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:23] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:23] "GET /static/img/admin-bg.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:32] "[32mPOST /deleteproduct/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:32] "GET /deleteproduct/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:33] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:33] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:33] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:33] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:38] "[32mPOST /deleteproduct/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:38] "GET /deleteproduct/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:39] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:43] "[32mPOST /deleteproduct/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:44] "[32mGET / HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:44] "GET /adminhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:44] "GET /static/img/login2.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:46] "GET /deleteproduct/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:46] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:54] "[32mPOST /deleteproduct/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:54] "GET /deleteproduct/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:55] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:55] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:55] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:55] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:56] "GET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:56] "GET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:56] "GET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:56] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:56] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:40:56] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:02] "[32mPOST /deleteproduct/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:02] "GET /deleteproduct/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:02] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:25] "GET /accounts/logout/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:25] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:26] "[32mPOST /accounts/logout/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:27] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:27] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:27] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:27] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:28] "GET /media/test-img-3_6rpFUOM.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:28] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:28] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:31] "GET /login_admin/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:31] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:31] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:31] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:32] "GET /static/img/login3.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:41] "[32mPOST /login_admin/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:42] "GET /adminhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:42] "GET /static/img/login2.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:43] "GET /deleteproduct/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:44] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:44] "GET /static/img/admin-bg.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:48] "[32mPOST /deleteproduct/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:48] "[32mGET / HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:48] "GET /adminhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:49] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:49] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:49] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:49] "GET /static/img/login2.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:54] "GET /deleteproduct/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:54] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:59] "[32mPOST /deleteproduct/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:41:59] "GET /deleteproduct/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:00] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:00] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:00] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:00] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:00] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:01] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:01] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:01] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:01] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:01] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:01] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:03] "GET /accounts/logout/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:04] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:05] "[32mPOST /accounts/logout/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:05] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:06] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:06] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:06] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:06] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:06] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:10] "GET /?category=S HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:10] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:11] "GET /?category=OW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:12] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:13] "GET /?category=SW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:13] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:14] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:14] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:14] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:14] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:14] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:15] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:21] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:21] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:21] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:21] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:22] "GET /static/img/login1.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:22] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:22] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:23] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:30] "[32mPOST /login_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:31] "GET /login_buyer/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:31] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:31] "GET /static/img/login2.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:36] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:36] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:47] "[32mPOST /login_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:47] "GET /login_buyer/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:47] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:42:48] "GET /static/img/login2.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:06] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:06] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:07] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:07] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:07] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:07] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:07] "GET /static/img/login1.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:17] "[32mPOST /login_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:17] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:18] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:18] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:18] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:18] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:21] "GET /uploadfile/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:21] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:21] "GET /static/img/verification.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:24] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:27] "GET /viewseller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:27] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:27] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:27] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:27] "GET /static/img/seller-my-profile.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:35] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:35] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:35] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:35] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:36] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:39] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:40] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:40] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:40] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:43:40] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:51] "POST /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:51] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:51] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:51] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:52] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:52] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:53] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:53] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:53] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:55] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:56] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:56] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:56] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:45:56] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:47:59] "POST /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:00] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:00] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:00] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:00] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:00] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:02] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:02] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:02] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:03] "GET /accounts/logout/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:04] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:04] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:04] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:04] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:05] "[32mPOST /accounts/logout/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:05] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:06] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:06] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:06] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:06] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:07] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:07] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:07] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:07] "GET /media/st2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:07] "GET /media/st1.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:07] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:15] "GET /?category=OW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:16] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:16] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:16] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:16] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:16] "[36mGET /media/st1.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:18] "GET /?category=SW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:19] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:20] "GET /?category=S HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:20] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:21] "GET /?category=SW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:22] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:23] "GET /?category=OW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:24] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:24] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:24] "GET /media/st2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:24] "GET /media/st1.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:25] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:25] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:45] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:46] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:46] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:46] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:46] "GET /static/img/login1.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:51] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:51] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:53] "GET /product/Pink-Crop-Top57/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:48:53] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:01] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:02] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:02] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:02] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:02] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:02] "GET /media/st2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:02] "GET /media/st1.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:07] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:08] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:09] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:09] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:09] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:09] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:09] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:09] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:10] "GET /static/img/login1.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:21] "[32mPOST /login_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:21] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:22] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:22] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:22] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:23] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:23] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:23] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:25] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:49:25] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:38] "POST /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:39] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:39] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:39] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:39] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:39] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:40] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:40] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:40] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:42] "GET /accounts/logout/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:43] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:43] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:43] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:43] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:43] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:44] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:44] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:45] "[32mPOST /accounts/logout/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:46] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:46] "GET /media/st1.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:47] "GET /media/e3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:47] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:47] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:47] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:47] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:47] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:47] "GET /media/st2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:53] "GET /?category=SW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:53] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:53] "[36mGET /media/e3.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:55] "GET /?category=S HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:55] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:56] "GET /?category=OW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:56] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:56] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:57] "GET /static/js/popper.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:57] "GET /media/st2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:57] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:57] "GET /media/st1.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:57] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:58] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:59] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:59] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:59] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:59] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:59] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:52:59] "GET /media/e3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:54:59] "GET /login_seller/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:00] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:00] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:00] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:00] "GET /static/js/keyboard.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:00] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:03] "GET /static/img/login1.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:03] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:03] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:03] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:03] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:03] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:09] "[32mPOST /login_seller/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:09] "GET /sellerhome/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:09] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:10] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:10] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:10] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:11] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:11] "GET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:13] "GET /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:13] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:44] "POST /add-new-item/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:45] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:45] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:45] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:45] "GET /static/img/seller-home-page.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:48] "GET /accounts/logout/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:49] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:50] "[32mPOST /accounts/logout/ HTTP/1.1[0m" 302 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:50] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:51] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:51] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:51] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:52] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:52] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:52] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:52] "GET /media/e2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:52] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:52] "GET /media/st2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:52] "GET /media/st1.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:52] "GET /media/e3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:53] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:55:59] "GET /?category=OW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:00] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:00] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:00] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:00] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:01] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:03] "GET /?category=SW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:03] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:03] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:04] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:04] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:04] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:04] "[36mGET /media/e2.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:05] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:05] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:15] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:15] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:15] "[36mGET /media/e3.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:56:15] "[36mGET /media/e2.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:28] "GET /?category=OW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:29] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:29] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:29] "[36mGET /media/st2.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:29] "[36mGET /media/st1.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:29] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:29] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:29] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:29] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:29] "GET /?category=SW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:30] "[36mGET /media/e3.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:30] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:30] "GET /static/js/mdb.min.js HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:30] "GET /static/img/logo.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:30] "[36mGET /media/e2.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:30] "GET /?category=S HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:31] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:31] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:31] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:31] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:33] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:33] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:33] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:33] "GET /media/st2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:34] "GET /media/st1.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:43] "GET /?category=SW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:44] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:44] "[36mGET /media/e2.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:44] "GET /?category=OW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:45] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:48] "GET /?category=SW HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:48] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:48] "GET /media/e3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:48] "GET /media/e2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:50] "GET /?category=S HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:51] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:51] "GET /media/test-img-5.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:51] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:51] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:53] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:57:54] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:00] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:00] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:03] "GET /product/Pink-Crop-Top57/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:04] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:10] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:11] "GET /media/e3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:11] "GET /media/e2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:11] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:11] "GET /media/test-img-4_UpUUuu6.jpg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:12] "GET /media/test-img-3_yDzr19d.jpeg HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:12] "GET /media/st3.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:12] "GET /media/st2.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:12] "GET /media/st1.png HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:56] "GET /product/Blue-Tshirt100/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:57] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:57] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:57] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:57] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:57] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:57] "[36mGET /static/font/roboto/Roboto-Bold.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:57] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:57] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:57] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:58] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:58] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:58:59] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:59:00] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:59:01] "GET /product/Apple-MacBook-Pro76/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:59:02] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 06:59:02] "[36mGET /media/e2.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 06:59:05] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 06:59:06] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:28] "GET / HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:28] "[36mGET /static/css/mdb.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:28] "[36mGET /static/css/style.min.css HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:28] "[36mGET /static/js/popper.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:28] "[36mGET /static/font/roboto/Roboto-Regular.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:28] "[36mGET /static/font/roboto/Roboto-Light.woff2 HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:29] "[36mGET /media/st3.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:29] "[36mGET /media/e2.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:29] "[36mGET /media/st1.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:29] "[36mGET /media/st2.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:29] "[36mGET /media/e3.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:30] "[36mGET /static/js/bootstrap.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:30] "[36mGET /static/js/mdb.min.js HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:30] "[35m[1mGET /static/js/jquery-3.3.1.min.js HTTP/1.1[0m" 500 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:30] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:00:30] "[36mGET /media/test-img-3_yDzr19d.jpeg HTTP/1.1[0m" 304 -
+
+192.168.1.99 - - [11/Nov/2021 07:06:28] "GET /login_admin/ HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 07:06:29] "GET /static/css/mdb.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 07:06:29] "GET /static/css/style.min.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 07:06:29] "GET /static/css/keyboard.css HTTP/1.1" 200 -
+
+192.168.1.99 - - [11/Nov/2021 07:06:29] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -

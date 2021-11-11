@@ -521,8 +521,19 @@ class AddNewItemView(LoginRequiredMixin, View):
                 print(form.cleaned_data)
                 title = form.cleaned_data.get('title')
                 price = form.cleaned_data.get('price')
+                if price<=0:
+                    messages.error(self.request, "Price must be greater than 0.")
+                    return redirect('core:addnewitem')
+                
                 label = 'P'
                 discount_price = form.cleaned_data.get('discount_price')
+                if discount_price!=None:
+                    if discount_price>price:
+                        messages.error(self.request, "Discount Price must be less than Price.")
+                        return redirect('core:addnewitem')
+                    if discount_price<0:
+                        messages.error(self.request, "Discount Price must be greater than 0.")
+                        return redirect('core:addnewitem')
                 description = form.cleaned_data.get('description')
                 category = form.cleaned_data.get('category')
                 slug = title.replace(' ', '-') + str(random.randint(1,100))

@@ -865,6 +865,9 @@ def SellerHome(request):
             messages.info(request, "Please Log In :D")
             return redirect('core:login_seller')
         seller = Seller.objects.filter(user=user_object).first()
+        if seller is None:
+            messages.info(request, "You are not registered as a seller.")
+            return redirect('core:home')
         return render(request,'sellerhome.html', {'seller':seller})
     except Exception as e:
         print(e)
@@ -890,7 +893,7 @@ def login_seller(request):
                 
                 if user_obj is None:
                     messages.error(request, 'User Does Not Exist')
-                    return redirect('core:login_buyer')
+                    return redirect('core:login_seller')
 
                 profile = Seller.objects.filter(user=user_obj).first()
 

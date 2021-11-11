@@ -64,7 +64,7 @@ class PaymentForm(forms.Form):
 class NewItemForm(forms.ModelForm):
     class Meta:
         model=Item
-        fields=['title','price','discount_price','category','description','image']
+        fields=['title','price','discount_price','category','description','image','image2']
         widgets={
             'title': forms.TextInput(attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
             'price': forms.TextInput(attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
@@ -72,6 +72,7 @@ class NewItemForm(forms.ModelForm):
             'category': forms.Select(choices=CATEGORY_CHOICES, attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
             'description': forms.Textarea(attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
             'image': forms.FileInput(attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
+            'image2': forms.FileInput(attrs={'class': 'form-desc', 'style':'border:1px solid gray; border-radius:10px'}),
         }
 
 

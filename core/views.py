@@ -527,8 +527,9 @@ class AddNewItemView(LoginRequiredMixin, View):
                 category = form.cleaned_data.get('category')
                 slug = title.replace(' ', '-') + str(random.randint(1,100))
                 image = form.cleaned_data.get('image')
+                image2 = form.cleaned_data.get('image2')
                 item = Item(title=title, price=price, discount_price=discount_price,
-                category=category, label=label, slug=slug, description=description, image=image)
+                category=category, label=label, slug=slug, description=description, image=image, image2=image2)
                 
                 item.user = self.request.user
                 item.save()

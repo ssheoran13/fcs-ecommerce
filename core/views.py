@@ -75,6 +75,7 @@ def model_form_upload(request):
         messages.info(request, "Some Error Occurred")
         return redirect('core:sellerhome')
 
+
 def decline_request(request,id):
     try:
         doc= Document.objects.get(id=id)
@@ -87,6 +88,7 @@ def decline_request(request,id):
         print(e)
         messages.info(request, "Some Error Occurred")
         return redirect('core:adminhome')
+
 
 def accept_request(request,id):
     try:
@@ -104,6 +106,7 @@ def accept_request(request,id):
         print(e)
         messages.info(request, "Some Error Occurred")
         return redirect('core:adminhome')
+
 
 def ViewSellerProfile(request):
     try:
@@ -319,36 +322,28 @@ class PaymentView(View):
             return redirect("/")
 
         except stripe.error.RateLimitError as e:
-            # Too many requests made to the API too quickly
             messages.warning(self.request, "Rate Limit Error")
             return redirect("/")
 
         except stripe.error.InvalidRequestError as e:
-            # Invalid parameters were supplied to Stripe's API
             print(e)
             messages.warning(self.request, "Invalid Parameters")
             return redirect("/")
 
         except stripe.error.AuthenticationError as e:
-            # Authentication with Stripe's API failed
-            # (maybe you changed API keys recently)
             messages.warning(self.request, "Not Authenticated")
             return redirect("/")
 
         except stripe.error.APIConnectionError as e:
-            # Network communication with Stripe failed
             messages.warning(self.request, "Network Error")
             return redirect("/")
 
         except stripe.error.StripeError as e:
-            # Display a very generic error to the user, and maybe send
-            # yourself an email
             messages.warning(
                 self.request, "Something went wrong. You were not charged. Please try again.")
             return redirect("/")
 
         except Exception as e:
-            # send an email to ourselves
             messages.error(
                 self.request, "A serious error occured. We have been notified.")
             return redirect("/")
@@ -427,6 +422,7 @@ class HomeView(ListView):
             print(e)
             messages.error(self.request, "Some Error Occurred")
             return redirect('core:home')
+
 
 def get_category_products(request, category):
     obj = Item.objects.filter(category=category)
@@ -521,22 +517,18 @@ class AddNewItemView(LoginRequiredMixin, View):
                 if seller.is_verified==False:
                     messages.error(self.request, "You are not verified as a seller yet.")
                     return render(self.request,'sellerhome.html')
-                
-                # print(self.request.POST['image'])
-                # print(self.request.FILES)
+
                 print(form.cleaned_data)
                 title = form.cleaned_data.get('title')
                 price = form.cleaned_data.get('price')
                 label = 'P'
+                discount_price = form.cleaned_data.get('discount_price')
                 description = form.cleaned_data.get('description')
                 category = form.cleaned_data.get('category')
                 slug = title.replace(' ', '-') + str(random.randint(1,100))
                 image = form.cleaned_data.get('image')
-                item = Item(title=title, price=price,
-                            category=category, label=label, slug=slug, description=description, image=image)
-                # item = form.save(commit=False)
-                # print(item_data)
-                
+                item = Item(title=title, price=price, discount_price=discount_price,
+                category=category, label=label, slug=slug, description=description, image=image)
                 
                 item.user = self.request.user
                 item.save()
@@ -551,6 +543,7 @@ class AddNewItemView(LoginRequiredMixin, View):
             print(e)
             messages.error(self.request, "Some Error Occurred")
             return redirect('core:sellerhome')
+
 
 @ratelimit(key='ip', rate='60/m')
 def add_to_cart(request, slug):
@@ -770,6 +763,7 @@ def login_buyer(request):
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
+
 @ratelimit(key='ip', rate='2/s')
 def signup_buyer(request):
     try:
@@ -807,6 +801,7 @@ def signup_buyer(request):
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
+
 def verify_buyer(request,auth_token):
     try:
         buyer = Buyer.objects.get(auth_token=auth_token)
@@ -818,6 +813,8 @@ def verify_buyer(request,auth_token):
         print(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
+
+
 def build_link_forgot_password(path):
     count = 0
     ans = ""
@@ -829,6 +826,7 @@ def build_link_forgot_password(path):
         i += 1
     ans+="reset_password"
     return ans
+
 
 def build_link(path,auth_token,type):
     count = 0
@@ -842,12 +840,14 @@ def build_link(path,auth_token,type):
     ans+="otp-"+type+"/"+auth_token
     return ans
 
+
 def send_email_forgot_password(email,link):
     subject = 'Reset Password'
     message = 'Click on the link to reset your password \n'+link
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [email]
-    send_mail( subject, message, email_from, recipient_list )     
+    send_mail( subject, message, email_from, recipient_list)
+
 
 def send_email(email,link):
     subject = 'Activate your account'
@@ -855,6 +855,7 @@ def send_email(email,link):
     from_email = settings.EMAIL_HOST_USER
     to_list = [email]
     send_mail(subject, message, from_email, to_list, fail_silently=True)
+
 
 def SellerHome(request):
     try:
@@ -869,6 +870,7 @@ def SellerHome(request):
         print(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
+
 
 @ratelimit(key='ip', rate='2/s')
 def login_seller(request):
@@ -951,6 +953,7 @@ def signup_seller(request):
         print(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
+
 
 def verify_seller(request,auth_token):
     try:
@@ -1038,9 +1041,8 @@ def deleteproduct(request):
             seller_item = SellerItem.objects.filter(item=item).first()
             user = seller_item.user
             item_owner_list.append([item, user.user.username])
-
-
         return render(request, 'deleteproduct.html', {'object_list': item_owner_list})
+    
     except ObjectDoesNotExist:
         messages.error(request, "The product you entered does not exist.")
         return redirect('core:adminhome')
@@ -1049,8 +1051,6 @@ def deleteproduct(request):
         print(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
-
-
 
 
 @ratelimit(key='ip', rate='2/s')
@@ -1095,7 +1095,6 @@ def login_admin(request):
         return redirect('core:home')
 
 
-
 def adminhome(request):
     try:
         user = request.user
@@ -1109,10 +1108,8 @@ def adminhome(request):
         if siteadmin == None:
             messages.info(request, "You are not Admin. Please login as Admin.")
             return redirect('/')
-        # user = request.user
         if user == None:
             return redirect('core:login_admin')
-
 
         return render(request,'adminhome.html')
     except Exception as e:
@@ -1120,8 +1117,10 @@ def adminhome(request):
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
+
 def rate_limit(request):
     return render(request, 'rate_limit.html')
+
 
 def forgot_password(request):
     try:
@@ -1142,6 +1141,7 @@ def forgot_password(request):
         print(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
+
 
 def reset_password(request):
     try:

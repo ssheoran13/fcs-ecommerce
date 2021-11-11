@@ -2,6 +2,8 @@ from django import forms
 from django_countries.fields import CountryField
 from django_countries.widgets import CountrySelectWidget
 from .models import Document, Item, CATEGORY_CHOICES
+import re
+from django.core.exceptions import ValidationError
 
 
 PAYMENT_CHOICES = (
@@ -76,6 +78,8 @@ class NewItemForm(forms.ModelForm):
         }
 
 
+
+
 class SignUpForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
@@ -89,7 +93,7 @@ class SignUpForm(forms.Form):
         'aria-label': 'Recipient\'s username', 
         'aria-describedby': 'basic-addon2'
     }))
-    password = forms.CharField(widget=forms.PasswordInput(attrs={
+    password = forms.CharField(min_length=8, widget=forms.PasswordInput(attrs={
         'class': 'form-control',
         'placeholder': 'Password',
         'aria-label': 'Recipient\'s username',

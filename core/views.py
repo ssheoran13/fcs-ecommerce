@@ -3,7 +3,7 @@ import random
 
 from django.conf import settings
 from django.contrib import messages
-from django.core.exceptions import ObjectDoesNotExist
+from django.core.exceptions import ObjectDoesNotExist, ValidationError
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404, redirect
@@ -12,6 +12,8 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 import uuid
 from django.views import generic
+from django.forms import ValidationError as ve
+
 from django.core.mail import send_mail
 from django.contrib.auth import authenticate,login
 from .forms import CheckoutForm, LoginForm, NewItemForm, SignUpForm, DocumentForm
@@ -808,8 +810,15 @@ def signup_buyer(request):
                 send_email(email,build_link(link,auth_token,"buyer"))
                 return redirect('core:signup_buyer')
         return render(request, 'signup_buyer.html')
-    except Exception as e:
+    except ve as e:
+        # raise ve(_(ve.message))
         print(e)
+        
+        messages.error(request, e.message)
+        return redirect('core:signup_buyer')
+        
+    except Exception as e:
+        print("sfbjsfbksifbe")
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 

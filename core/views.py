@@ -267,8 +267,8 @@ class PaymentView(View):
             messages.info(self.request, "Some Error Occurred")
             return redirect('core:home')
 
-    def post(self, *args, **kwargs):
-        
+
+    def post(self, *args, **kwargs):        
         user = self.request.user
         buyer = Buyer.objects.filter(user=user).first()
         if buyer == None:
@@ -303,8 +303,6 @@ class PaymentView(View):
             payment.amount = order.get_total()
             payment.save()
 
-            # assign the payment to the order
-
             order_items = order.items.all()
             order_items.update(ordered=True)
             for item in order_items:
@@ -324,20 +322,20 @@ class PaymentView(View):
             return redirect("/")
 
         except stripe.error.RateLimitError as e:
-            messages.warning(self.request, "Rate Limit Error")
+            messages.warning(self.request, "Rate Limit Error.")
             return redirect("/")
 
         except stripe.error.InvalidRequestError as e:
             print(e)
-            messages.warning(self.request, "Invalid Parameters")
+            messages.warning(self.request, "Invalid Parameters.")
             return redirect("/")
 
         except stripe.error.AuthenticationError as e:
-            messages.warning(self.request, "Not Authenticated")
+            messages.warning(self.request, "Not Authenticated.")
             return redirect("/")
 
         except stripe.error.APIConnectionError as e:
-            messages.warning(self.request, "Network Error")
+            messages.warning(self.request, "Network Error.")
             return redirect("/")
 
         except stripe.error.StripeError as e:

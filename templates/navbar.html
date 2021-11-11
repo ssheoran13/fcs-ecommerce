@@ -2,7 +2,6 @@
 {% load static %}
 
 <style>
-    /* Dropdown Button */
     .dropbtn {
         background-color: #ffffff;
         border: none;
@@ -47,7 +46,6 @@
         
         <a class="navbar-brand waves-effect" href="/">
             <img src="{% static 'img/logo.png' %}" style="width:35px; height:35px">
-            <!-- <strong class="blue-text">FCS e-Commerce</strong> -->
         </a>
         
         <!-- Collapse -->
@@ -79,7 +77,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link waves-effect" href="#">
-                    <span class="clearfix d-none d-sm-inline-block">{{request.user.username}} </span>
+                    <span class="clearfix d-none d-sm-inline-block" style="font-weight:bold; color:#2b6777;">{{request.user.username}} </span>
                 </a>
             </li>
             

@@ -15,7 +15,6 @@
             box-sizing: border-box;
         }
         body {
-            /* background-color: #52ab98; */
             display: grid;
             place-items: center;
             min-height: 100vh;
@@ -88,7 +87,6 @@
             <!-- Brand -->
             <a class="navbar-brand waves-effect" href="#">
                 <img src="{% static 'img/logo.png' %}" style="width:35px; height:35px">
-                <!-- <strong class="blue-text">FCS e-Commerce</strong> -->
             </a>
             
             <!-- Collapse -->
@@ -106,17 +104,17 @@
             
             <!-- Right -->
             <ul class="navbar-nav nav-flex-icons">
-                {% if request.user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link waves-effect" href="#">
-                        <span class="clearfix d-none d-sm-inline-block">{{request.user.username}}</span>
-                    </a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link waves-effect" href="{% url 'account_logout' %}">
                         <span class="clearfix d-none d-sm-inline-block">Logout</span>
                     </a>
-                </li>    
+                </li> 
+                {% if request.user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="{% url 'core:viewseller' %}">
+                        <span class="clearfix d-none d-sm-inline-block" style="font-weight:bold; color:#2b6777;">{{request.user.username}}</span>
+                    </a>
+                </li>
                                              
                 {% endif %}
             </ul>
@@ -150,8 +148,8 @@
         <div class="pb-4">
             <a href=""><i class="fab fa-facebook-f mr-3"></i></a>
             <a href=""><i class="fab fa-twitter mr-3"></i></a>
-            <a href=""><i class="fab fa-youtube mr-3"></i></a>
-            <a href=""><i class="fab fa-instagram mr-3"></i></a>
+            <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank"><i class="fab fa-youtube mr-3"></i></a>
+            <a href="https://www.instagram.com/p/CWCHjt2BSwH/?utm_source=ig_web_copy_link" target="_blank"><i class="fab fa-instagram mr-3"></i></a>
         </div>
         <div class="footer-copyright py-3">
             <a href="#"><strong>G17</strong></a>

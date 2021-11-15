@@ -73,7 +73,8 @@ def model_form_upload(request):
             'form': form
         })
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.info(request, "Some Error Occurred")
         return redirect('core:sellerhome')
 
@@ -87,7 +88,8 @@ def decline_request(request,id):
                     
         return redirect('core:adminhome')
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.info(request, "Some Error Occurred")
         return redirect('core:adminhome')
 
@@ -100,12 +102,13 @@ def accept_request(request,id):
         seller=Seller.objects.get(user=user)
         seller.is_verified=True
         seller.save()
-        print(seller.is_verified)
+        # print(seller.is_verified)
         messages.success(request, "Seller "+user.username+"'s request has been accepted.")
                     
         return redirect('core:adminhome')
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.info(request, "Some Error Occurred")
         return redirect('core:adminhome')
 
@@ -128,7 +131,8 @@ def ViewSellerProfile(request):
         selleritems=SellerItem.objects.filter(user=seller)
         return render(request, 'view_seller_profile.html', {'seller': seller, 'selleritems': selleritems})
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.info(request, "Some Error Occurred")
         return redirect('core:sellerhome')    
     
@@ -148,11 +152,12 @@ def ViewDocument(request):
             return redirect('/')
 
         documents = Document.objects.all()
-        for i in documents:
-            print(i.document)    
+        # for i in documents:
+        #     print(i.document)    
         return render(request, 'view_document.html', {'documents': documents})
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.info(request, "Some Error Occurred")
         return redirect('core:adminhome')
 
@@ -163,7 +168,7 @@ class CheckoutView(View):
             user = self.request.user
             buyer = Buyer.objects.filter(user=user).first()
             if buyer == None:
-                print("this 1")
+                # print("this 1")
                 messages.info(self.request, "You are not a Buyer. Please login as Buyer.")
                 return redirect('/')
             if user == None:
@@ -193,7 +198,7 @@ class CheckoutView(View):
             user = self.request.user
             buyer = Buyer.objects.filter(user=user).first()
             if buyer == None:
-                print("this 2")
+                # print("this 2")
                 messages.info(self.request, "You are not a Buyer. Please login as Buyer.")
                 return redirect('/')
             if user == None:
@@ -205,11 +210,11 @@ class CheckoutView(View):
                 return redirect('core:home')
             order = Order.objects.get(user=self.request.user, ordered=False)
             if form.is_valid():
-                print(form.cleaned_data)
+                # print(form.cleaned_data)
                 street_address = form.cleaned_data['shipping_address']
-                print(street_address)
+                # print(street_address)
                 apartment_address = form.cleaned_data['shipping_address2']
-                print(apartment_address)
+                # print(apartment_address)
                 country = form.cleaned_data.get('shipping_country')
                 zip = form.cleaned_data.get('shipping_zip')
                 payment_option = form.cleaned_data.get('payment_option')
@@ -236,7 +241,8 @@ class CheckoutView(View):
             return redirect("core:order-summary")
         
         except Exception as e:
-            print(e)
+            # print(e)
+            error_log(e)
             messages.error(self.request, "Some Error Occoured")
             return redirect("core:home")
 
@@ -247,7 +253,7 @@ class PaymentView(View):
             user = self.request.user
             buyer = Buyer.objects.filter(user=user).first()
             if buyer == None:
-                print("this 3")
+                # print("this 3")
                 messages.info(self.request, "You are not a Buyer. Please login as Buyer.")
                 return redirect('/')
             if user == None:
@@ -263,7 +269,8 @@ class PaymentView(View):
             }
             return render(self.request, "payment.html", context)
         except Exception as e:
-            print(e)
+            # print(e)
+            error_log(e)
             messages.info(self.request, "Some Error Occurred")
             return redirect('core:home')
 
@@ -272,7 +279,7 @@ class PaymentView(View):
         user = self.request.user
         buyer = Buyer.objects.filter(user=user).first()
         if buyer == None:
-            print("this 4")
+            # print("this 4")
             messages.info(self.request, "You are not a Buyer. Please login as Buyer.")
             return redirect('/')
         if user == None:
@@ -285,9 +292,9 @@ class PaymentView(View):
         order = Order.objects.get(user=self.request.user, ordered=False)
         token = self.request.POST.get('stripeToken')
         amount = int(order.get_total() * 100)
-        print(order)
-        print(token)
-        print(amount)
+        # print(order)
+        # print(token)
+        # print(amount)
 
         charge = stripe.Charge.create(
             amount=amount,  # cents
@@ -326,7 +333,8 @@ class PaymentView(View):
             return redirect("/")
 
         except stripe.error.InvalidRequestError as e:
-            print(e)
+            # print(e)
+            error_log(e)
             messages.warning(self.request, "Invalid Parameters.")
             return redirect("/")
 
@@ -358,18 +366,19 @@ class HomeView(ListView):
     @method_decorator(ratelimit(key='ip', rate='60/m', method='POST'))
     def post(self, *args, **kwargs):
         try:
-            print(self.model)
-            print(self.request.POST)
+            # print(self.model)
+            # print(self.request.POST)
             search_query = self.request.POST.get("search")
-            print("response:",search_query)
+            # print("response:",search_query)
             obj = Item.objects.all().filter(title=search_query)
-            for i in obj:
-                print("test", i.title)
+            # for i in obj:
+            #     print("test", i.title)
             self.search_query = search_query
-            print(self.model)
+            # print(self.model)
             return render(self.request, "home.html", {'object_list': obj})
         except Exception as e:
-            print(e)
+            # print(e)
+            error_log(e)
             messages.error(self.request, "Some Error Occurred")
             return redirect('core:home')
 
@@ -381,13 +390,13 @@ class HomeView(ListView):
             if was_limited:
                 messages.error(self.request, 'Too Many Requests')
                 return redirect('core:ratelimit')
-            print(was_limited)
+            # print(was_limited)
             user_object = User.objects.filter(username=user.username).first()
             if user_object == None:
                 if len(self.request.GET):
                     category = self.request.GET.get('category')
                     obj = Item.objects.filter(category=category)
-                    print(len(obj))
+                    # print(len(obj))
                     return render(self.request, 'home.html', {'object_list':obj})
 
                 return render(self.request, 'home.html', {'object_list':Item.objects.all()})
@@ -406,7 +415,7 @@ class HomeView(ListView):
                 if len(self.request.GET):
                     category = self.request.GET.get('category')
                     obj = Item.objects.filter(category=category)
-                    print(len(obj))
+                    # print(len(obj))
                     return render(self.request, 'home.html', {'object_list':obj})
 
                 return render(self.request, 'home.html', {'object_list':Item.objects.all()})
@@ -415,11 +424,12 @@ class HomeView(ListView):
                 if len(self.request.GET):
                     category = self.request.GET.get('category')
                     obj = Item.objects.filter(category=category)
-                    print(len(obj))
+                    # print(len(obj))
                     return render(self.request, 'home.html', {'object_list':obj})
                 return render(self.request, 'home.html', {'object_list':Item.objects.all()})
         except Exception as e:
-            print(e)
+            # print(e)
+            error_log(e)
             messages.error(self.request, "Some Error Occurred")
             return redirect('core:home')
 
@@ -440,7 +450,7 @@ class OrderSummaryView(LoginRequiredMixin, View):
 
             buyer = Buyer.objects.filter(user=user).first()
             if buyer == None:
-                print("this 5")
+                # print("this 5")
                 messages.info(self.request, "You are not a buyer. Please login as Buyer.")
                 return redirect('/')
             try:
@@ -454,7 +464,8 @@ class OrderSummaryView(LoginRequiredMixin, View):
                 messages.error(self.request, "You do not have an active order")
                 return redirect("/")
         except Exception as e:
-            print(e)
+            # print(e)
+            error_log(e)
             messages.error(self.request, "Some Error Occurred")
             return redirect('core:home')
 
@@ -486,7 +497,8 @@ class AddNewItemView(LoginRequiredMixin, View):
             }
             return render(self.request, 'add-new-item.html', context)
         except Exception as e:
-            print(e)
+            # print(e)
+            error_log(e)
             messages.error(self.request, "Some Error Occurred")
             return redirect('core:sellerhome')
 
@@ -518,7 +530,7 @@ class AddNewItemView(LoginRequiredMixin, View):
                     messages.error(self.request, "You are not verified as a seller yet.")
                     return render(self.request,'sellerhome.html')
 
-                print(form.cleaned_data)
+                # print(form.cleaned_data)
                 title = form.cleaned_data.get('title')
                 price = form.cleaned_data.get('price')
                 if price<=0:
@@ -552,7 +564,8 @@ class AddNewItemView(LoginRequiredMixin, View):
                 messages.error(self.request, "Item was not added")
                 return redirect("core:add-new-item")
         except Exception as e:
-            print(e)
+            # print(e)
+            error_log(e)
             messages.error(self.request, "Some Error Occurred")
             return redirect('core:sellerhome')
 
@@ -576,7 +589,7 @@ def add_to_cart(request, slug):
         if was_limited:
             messages.error(request, 'Too Many Requests')
             return redirect('core:ratelimit')
-        print("cart",was_limited)
+        # print("cart", was_limited)
         item = get_object_or_404(Item, slug=slug)
         order_item, created = OrderItem.objects.get_or_create(
             item=item,
@@ -606,7 +619,8 @@ def add_to_cart(request, slug):
 
             return redirect("core:order-summary")
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -638,7 +652,8 @@ def add_new_item(request):
             form = NewItemForm()
         return render(request, 'add_new_item.html', {'form': form})
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:sellerhome')
 
@@ -670,7 +685,8 @@ def remove_from_cart(request, slug):
             messages.info(request, "You do not have an active order.")
             return redirect("core:order-summary", slug=slug)
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -706,7 +722,8 @@ def remove_single_item_from_cart(request, slug):
             messages.info(request, "You do not have an active order.")
             return redirect("core:product", slug=slug)
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -771,7 +788,8 @@ def login_buyer(request):
                     return redirect('core:login_buyer')
         return render(request, 'login_buyer.html')
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -804,19 +822,19 @@ def signup_buyer(request):
                 buyer.save()
                 messages.success(request, 'Account Created Successfully. Please Check Your Email To Verify Your Account.')
                 link = request.build_absolute_uri()
-                print(link)
+                # print(link)
                 send_email(email,build_link(link,auth_token,"buyer"))
                 return redirect('core:signup_buyer')
         return render(request, 'signup_buyer.html')
     except ve as e:
-        # raise ve(_(ve.message))
-        print(e)
-        
+        # print(e)
+        error_log(e)
         messages.error(request, e.message)
         return redirect('core:signup_buyer')
         
     except Exception as e:
-        print("sfbjsfbksifbe")
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -829,7 +847,8 @@ def verify_buyer(request,auth_token):
         messages.success(request, 'Account Verified Successfully')
         return redirect('core:login_buyer')
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -856,7 +875,7 @@ def build_link(path,auth_token,type):
             count += 1
         ans += path[i]
         i += 1
-    ans+="otp-"+type+"/"+auth_token
+    ans+="otp-" + type + "/" + auth_token
     return ans
 
 
@@ -889,7 +908,8 @@ def SellerHome(request):
             return redirect('core:home')
         return render(request,'sellerhome.html', {'seller':seller})
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -934,7 +954,8 @@ def login_seller(request):
                     return redirect('core:login_seller')
         return render(request, 'login_seller.html')
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -967,12 +988,13 @@ def signup_seller(request):
                 buyer.save()
                 messages.success(request, 'Account Created Successfully. Please Check Your Email To Verify Your Account.')
                 link = request.build_absolute_uri()
-                print(link)
+                # print(link)
                 send_email(email,build_link(link,auth_token,"seller"))
                 return redirect('core:signup_seller')
         return render(request, 'signup_seller.html')
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -985,7 +1007,7 @@ def verify_seller(request,auth_token):
         messages.success(request, 'Account Verified Successfully')
         return redirect('core:login_seller')
     except Exception as e:
-        print(e)
+        # print(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -1025,7 +1047,8 @@ def siteadmin(request):
         return redirect('core:adminhome')
 
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -1049,10 +1072,10 @@ def deleteproduct(request):
 
         if request.method == 'POST':
             title_ = request.POST.get('title_')
-            print(title_)
+            # print(title_)
             title = Item.objects.filter(title = title_).first()
 
-            print(title)
+            # print(title)
             title.delete()
             return redirect('core:deleteproduct')
     
@@ -1070,7 +1093,8 @@ def deleteproduct(request):
         return redirect('core:adminhome')
 
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -1112,7 +1136,8 @@ def login_admin(request):
 
         return render(request, 'login_admin.html')
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -1133,9 +1158,10 @@ def adminhome(request):
         if user == None:
             return redirect('core:login_admin')
 
-        return render(request,'adminhome.html')
+        return render(request, 'adminhome.html')
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -1160,7 +1186,8 @@ def forgot_password(request):
                 return redirect('core:home')
         return render(request, 'forgot_password.html')
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
 
@@ -1181,6 +1208,17 @@ def reset_password(request):
                 return redirect('core:home')
         return render(request, 'reset_password.html')
     except Exception as e:
-        print(e)
+        # print(e)
+        error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
+
+
+def error_log(err):
+    try:
+        file1 = open("error_log.txt", "a")
+        file1.write(str(err), "\n")
+        file1.close()
+    except Exception as e:
+        print(e)
+

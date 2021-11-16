@@ -117,12 +117,17 @@
       </tr>
     </table>
     
+    <p></p>
+    <p></p>
+    <p></p>
     <form method="POST"> 
       {% csrf_token %}
-      <label>Enter the account username you want to delete:</label>
+      <label>Enter the account username you want to delete: <br><small>Note: Deleting a seller will also delete their products.</small></label>
       <input id="inp-btn" type='text' name='user_name'/><br><br>
       <input id="sub-btn" type="submit" name="Submit"/>
     </form>
+
+    
     
     <a class="btn go-back" href="{% url 'core:deleteproduct' %}">Delete Products</a>
     <a class="btn go-back" href="{% url 'core:viewfiles' %}">Verify Seller</a>

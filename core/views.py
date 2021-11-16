@@ -1030,9 +1030,21 @@ def siteadmin(request):
 
         if request.method == 'POST':
             user_name = request.POST.get('user_name')
-            user = User.objects.filter(username = user_name).first()
-            user.delete()
-            return redirect('core:siteadmin')
+
+            if user_name != "SiteAdmin_1" :
+                user = User.objects.filter(username = user_name).first()
+
+                # seller_items = SellerItem.objects.filter(user=user)
+                # while seller_items :
+                #     temp = seller_items[0]
+                #     temp.delete()
+                #     seller_items = SellerItem.objects.filter(user=user)
+
+                user.delete()
+                return redirect('core:siteadmin')
+            else :
+                messages.error(request, 'Cannot Delete A Site Admin')
+                return redirect('core:adminhome')
 
         buyer_list = Buyer.objects.all()
         seller_list = Seller.objects.all()
@@ -1057,6 +1069,7 @@ def deleteproduct(request):
     try:
         user = request.user
         if user == None :
+            print("errir reached if stateent")
             messages.error(request, 'User does not exist')
             return redirect('core:login_admin')
 
@@ -1093,9 +1106,9 @@ def deleteproduct(request):
         return redirect('core:adminhome')
 
     except Exception as e:
-        # print(e)
+        #print(e)
         error_log(e)
-        messages.error(request, "Some Error Occurred")
+        messages.error(request, "Some Error Occurred In Delete Product")
         return redirect('core:home')
 
 
@@ -1217,7 +1230,7 @@ def reset_password(request):
 def error_log(err):
     try:
         file1 = open("error_log.txt", "a")
-        file1.write(str(err), "\n")
+        file1.write(str(err)+"\n")
         file1.close()
     except Exception as e:
         print(e)

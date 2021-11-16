@@ -21,3 +21,14 @@
 'NoneType' object has no attribute 'user'
 'NoneType' object has no attribute 'user'
 'NoneType' object has no attribute 'user'
+Cannot query "samikseller2": Must be "Seller" instance.
+Cannot query "samikseller2": Must be "Seller" instance.
+Cannot query "samikseller2": Must be "Seller" instance.
+Cannot query "samikseller2": Must be "Seller" instance.
+Cannot query "SiteAdmin_1": Must be "Seller" instance.
+'NoneType' object has no attribute 'user'
+'NoneType' object has no attribute 'user'
+'NoneType' object has no attribute 'user'
+'NoneType' object has no attribute 'user'
+'NoneType' object has no attribute 'user'
+'NoneType' object has no attribute 'user'

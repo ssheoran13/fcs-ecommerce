@@ -1032,15 +1032,21 @@ def siteadmin(request):
             user_name = request.POST.get('user_name')
 
             if user_name != "SiteAdmin_1" :
-                user = User.objects.filter(username = user_name).first()
+                user_delete = User.objects.filter(username = user_name).first()
+                seller_delete = Seller.objects.filter(user=user_delete).first()
+                
+                if seller_delete is not None:
+                    seller_items = SellerItem.objects.filter(user=seller_delete)
+                    while seller_items :
+                        print(len(seller_items))
+                        temp = seller_items[0]
+                        print(temp)
+                        item = temp.item
+                        item.delete()
+                        temp.delete()
+                        seller_items = SellerItem.objects.filter(user=seller_delete)
 
-                # seller_items = SellerItem.objects.filter(user=user)
-                # while seller_items :
-                #     temp = seller_items[0]
-                #     temp.delete()
-                #     seller_items = SellerItem.objects.filter(user=user)
-
-                user.delete()
+                user_delete.delete()
                 return redirect('core:siteadmin')
             else :
                 messages.error(request, 'Cannot Delete A Site Admin')
@@ -1059,7 +1065,7 @@ def siteadmin(request):
         return redirect('core:adminhome')
 
     except Exception as e:
-        # print(e)
+        print(e)
         error_log(e)
         messages.error(request, "Some Error Occurred")
         return redirect('core:home')
@@ -1096,6 +1102,7 @@ def deleteproduct(request):
         product_list = Item.objects.all()
         item_owner_list = []
         for item in product_list:
+            print(item.title)
             seller_item = SellerItem.objects.filter(item=item).first()
             user = seller_item.user
             item_owner_list.append([item, user.user.username])
@@ -1106,7 +1113,7 @@ def deleteproduct(request):
         return redirect('core:adminhome')
 
     except Exception as e:
-        #print(e)
+        print(e)
         error_log(e)
         messages.error(request, "Some Error Occurred In Delete Product")
         return redirect('core:home')
